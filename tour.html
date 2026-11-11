@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tour | Olivia Rodrigo</title>
+    <!-- Bootstrap & CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/tour.css">
+    <!-- Enlace para el favicon en formato SVG -->
+    <link rel="icon" type="image/svg+xml" href="assets/iconos/favicon/favicon-or.svg">
+</head>
+
+<body>
+    <header>
+        <div class="hero">
+            <div class="container">
+                <nav class="d-flex justify-content-between align-items-center p-3">
+                    <!-- Menú desplegable -->
+                    <div class="dropdown">
+                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <!-- Menú ícono -->
+                            <svg width="47" height="47" viewBox="0 0 47 47" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.80005 11.7002H39" stroke-width="3.9" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke="#654A41" />
+                                <path d="M7.80005 23.3999H39" stroke-width="3.9" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke="#654A41" />
+                                <path d="M7.80005 35.1001H39" stroke-width="3.9" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke="#654A41" />
+                            </svg>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="index.html">Home</a></li>
+                            <li><a class="dropdown-item" href="conoce-mas.html">Conocé más</a></li>
+                            <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+                            <li><a class="dropdown-item" href="tour.html">Tour</a></li>
+                            <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <!--Logo-->
+                    <a href="index.html">
+                        <img src="img/Logo-OR-blanco.png" alt="Logo">
+                    </a>
+
+                    <div class="iconos-alineados-derecha d-flex justify-content-end gap-2">
+                        <!--Cart ícono-->
+                        <a href="productos.html">
+                            <svg width="54" height="54" viewBox="0 0 54 54" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M40.5 43.875C40.5 45.739 38.989 47.25 37.125 47.25C35.261 47.25 33.75 45.739 33.75 43.875C33.75 42.011 35.261 40.5 37.125 40.5C38.989 40.5 40.5 42.011 40.5 43.875Z"
+                                    stroke-width="3.375" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke="#654A41" />
+                                <path
+                                    d="M22.5 43.875C22.5 45.739 20.9889 47.25 19.125 47.25C17.261 47.25 15.75 45.739 15.75 43.875C15.75 42.011 17.261 40.5 19.125 40.5C20.9889 40.5 22.5 42.011 22.5 43.875Z"
+                                    stroke-width="3.375" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke="#654A41" />
+                                <path
+                                    d="M8.3454 12.15H42.5791C45.6789 12.15 47.9177 15.0088 47.0686 17.8826L43.346 30.4826C42.7747 32.4163 40.9422 33.75 38.8565 33.75H18.2512C16.1656 33.75 14.333 32.4163 13.7617 30.4826L8.3454 12.15ZM8.3454 12.15L6.75 6.75"
+                                    stroke-width="3.375" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke="#654A41" />
+                            </svg>
+                        </a>
+
+                        <!--Search ícono-->
+                        <a href="#">
+                            <svg width="58" height="58" viewBox="0 0 58 58" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M37.8257 34.4594L45.3269 41.9606C46.2355 42.8692 46.241 44.3819 45.3114 45.3114C44.3753 46.2475 42.8816 46.248 41.9606 45.327L34.4593 37.8257C32.1246 39.4883 29.2685 40.4661 26.1839 40.4661C18.2961 40.4661 11.9018 34.0718 11.9018 26.184C11.9018 18.2962 18.2961 11.9019 26.1839 11.9019C34.0718 11.9019 40.4661 18.2962 40.4661 26.184C40.4661 29.2685 39.4883 32.1247 37.8257 34.4594ZM26.1839 36.8956C32.0998 36.8956 36.8955 32.0999 36.8955 26.184C36.8955 20.2681 32.0998 15.4724 26.1839 15.4724C20.2681 15.4724 15.4723 20.2681 15.4723 26.184C15.4723 32.0999 20.2681 36.8956 26.1839 36.8956Z"
+                                    fill="#654A41" />
+                            </svg>
+                        </a>
+                    </div>
+                </nav>
+
+                <div class="hero-content d-flex justify-content-between align-items-center pt-5">
+                    <div class="contenedor-tour">
+                        <h1>The Unraveled Tour</h1>
+                        <p><span>Hay canciones que se sienten como un secreto y otras que necesitamos
+                                gritar a todo pulmón. En esta gira, quiero compartir cada emoción,
+                                cada historia y cada parte de mí con ustedes. Nos vemos bajo las luces.</span></p>
+                    </div>
+                    <div class="contenedor-boton d-flex flex-column gap-3">
+                        <p class="paises-tour">Estados Unidos, Suecia, Paises Bajos, Alemania, Reino Unido, Francia, Italia, España</p>
+                        <a class="btn-light-pink d-none d-sm-block"
+                            href="https://www.ticketmaster.com/olivia-rodrigo-tickets/artist/2836194"
+                            target="_blank">Comprar entrada</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="contenido-img-promocional">
+        <div class="linea-separadora linea-rosa"></div>
+        <div class="imagen-promocional-fondo"></div>
+        <div class="linea-separadora linea-rosa"></div>
+    </div>
+
+    <section class="container d-flex flex-column align-items-center gap-3">
+        <div class="contenido-fechas d-flex flex-column flex-md-row justify-content-between align-items-center align-items-md-start w-100 gap-4">
+            <img src="img/olivia-lluvia-show.png" alt="Olivia bajo la lluvia en concierto" class="img-fluid">
+            <div class="fechas justify-content-end">
+                <p>Hartford, CT</p>
+                <p>Pittsburgh, PA</p>
+                <p>Washington, DC</p>
+                <p>Charlotte, NC</p>
+                <p>Chicago, IL</p>
+                <p>Boston, MA</p>
+                <p>Montreal, QC</p>
+                <p>Toronto, ON</p>
+                <p>Columbus, OH</p>
+                <p>Philadelphia, PA</p>
+                <p>Atlanta, GA</p>
+                <p>Orlando, FL</p>
+                <p>Sunrise, FL</p>
+                <p>Nashville, TN</p>
+                <p>Vancouver, BC</p>
+                <p>Seattle, WA</p>
+                <p>Oakland, CA</p>
+                <p>Sacramento, CA</p>
+                <p>Las Vegas, NV</p>
+                <p>Inglewood, CA</p>
+                <p>Brooklyn, NY</p>
+                <p>Stockholm, Sweden</p>
+                <p>Amsterdam, Netherlands</p>
+                <p>Munich, Germany</p>
+                <p>London, UK</p>
+                <p>Paris, France</p>
+                <p>Milan, Italy</p>
+                <p>Barcelona, Spain</p>
+            </div>
+        </div>
+    </section>
+
+        <section class="proximamente container d-flex flex-column align-items-center gap-3">
+            <h2>Próximamente ♡</h2>
+            <img src="img/nashville-proximo-concierto.png" alt="Nashville próximo concierto"
+                class="img-fluid nashville-img">
+            <a class="btn-light-pink" href="https://www.ticketmaster.com/olivia-rodrigo-tickets/artist/2836194"
+                target="_blank">Comprar entrada</a>
+        </section>
+
+
+        <!--VIDEO EMBEBIDO-->
+        <section class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="ratio ratio-16x9">
+
+                        <iframe width="560" height="315"
+                            src="https://www.youtube.com/embed/rylGeEPzVmc?si=B_qiViq6usXUww1k&amp;controls=0"
+                            title="Unraveled Tour" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                        </iframe>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!--
+        <section class="carousel-fotos-shows">
+            <div id="carouselTour" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                <div class="carousel-inner">
+                    <article class="carousel-item active">
+                        <img class="img-fluid d-block mx-auto" src="img/olivia-carrousel-flores-show.png"
+                            alt="Olivia en un concierto con temática de flores.">
+                    </article>
+                    <article class="carousel-item">
+                        <img class="img-fluid d-block mx-auto" src="img/olivia-carrousel-show.png"
+                            alt="Olivia en un concierto.">
+                    </article>
+                    <article class="carousel-item">
+                        <iframe class="img-fluid d-block mx-auto" src="img/olivia-carrousel-show.png"
+                            alt="Olivia en un concierto.">
+                    </article>
+                    <article class="carousel-item">
+                        <img class="img-fluid d-block mx-auto" src="img/olivia-carrousel-lluvia-show.png"
+                            alt="Olivia en un concierto bajo la lluvia, con su vestido deshaciendose para transicionar a otro.">
+                    </article>
+                </div> 
+            -->
+
+        <!-- El deslizador -->
+        <!--
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselTour" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselTour" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselTour" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    
+                </div>
+            </section>
+            -->
+
+        <footer>
+            <div class="linea-separadora"></div>
+            <p class="frase-footer">You seem pretty sad for a girl so in love</p>
+            <div class="linea-separadora"></div>
+            <div class="container d-flex flex-column align-items-center">
+                <div class="redes-sociales justify-content-center d-flex gap-4">
+                    <!-- Redes sociales -->
+                    <!-- Tiktok -->
+                    <a href="https://www.tiktok.com/@livbedumb?lang=es" target="_blank">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_52_486)">
+                                <mask id="mask0_52_486" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0"
+                                    y="0" width="46" height="46">
+                                    <path d="M46 0H0V46H46V0Z" fill="white" />
+                                </mask>
+                                <g mask="url(#mask0_52_486)">
+                                    <path
+                                        d="M24.0158 0.0383333C26.5267 0 29.0183 0.0191667 31.51 0C31.6633 2.9325 32.7175 5.9225 34.8642 7.9925C37.0108 10.12 40.0392 11.0975 42.9908 11.4233V19.1475C40.2308 19.0517 37.4517 18.4767 34.9408 17.2883C33.8483 16.79 32.8325 16.1575 31.8358 15.5058C31.8167 21.1025 31.855 26.6992 31.7975 32.2767C31.6442 34.96 30.7625 37.6242 29.21 39.8283C26.6992 43.5083 22.3483 45.9042 17.8825 45.9808C15.1417 46.1342 12.4008 45.3867 10.0625 44.0067C6.19084 41.7258 3.46917 37.5475 3.06667 33.0625C3.02834 32.1042 3.00917 31.1458 3.04751 30.2067C3.39251 26.565 5.19417 23.0767 7.9925 20.7C11.1742 17.94 15.6208 16.6175 19.78 17.4033C19.8183 20.24 19.7033 23.0767 19.7033 25.9133C17.8058 25.3 15.5825 25.4725 13.915 26.6225C12.7075 27.4083 11.7875 28.6158 11.3083 29.9767C10.9058 30.9542 11.0208 32.0275 11.04 33.0625C11.5 36.2058 14.5283 38.8508 17.7483 38.5633C19.895 38.5442 21.9458 37.2983 23.0575 35.4775C23.4217 34.845 23.8242 34.1933 23.8433 33.4458C24.035 30.015 23.9583 26.6033 23.9775 23.1725C23.9967 15.4483 23.9583 7.74331 24.0158 0.0383333Z"
+                                        fill="#654A41" />
+                                </g>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_52_486">
+                                    <rect width="46" height="46" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/oliviarodrigo/" target="_blank">
+                        <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M26.5 17.1143C21.3166 17.1143 17.1146 21.3163 17.1146 26.4997C17.1146 31.6831 21.3166 35.8851 26.5 35.8851C31.6834 35.8851 35.8854 31.6831 35.8854 26.4997C35.8854 21.3163 31.6834 17.1143 26.5 17.1143Z"
+                                fill="#654A41" />
+                            <path
+                                d="M4.41669 15.4587C4.41669 9.36052 9.36022 4.41699 15.4584 4.41699H37.5417C43.6398 4.41699 48.5834 9.36052 48.5834 15.4587V37.542C48.5834 43.6401 43.6398 48.5837 37.5417 48.5837H15.4584C9.36022 48.5837 4.41669 43.6401 4.41669 37.542V15.4587ZM13.8021 26.5003C13.8021 33.5131 19.4871 39.1982 26.5 39.1982C33.5128 39.1982 39.1979 33.5131 39.1979 26.5003C39.1979 19.4875 33.5128 13.8024 26.5 13.8024C19.4871 13.8024 13.8021 19.4875 13.8021 26.5003ZM39.75 15.4587C40.9697 15.4587 41.9584 14.4699 41.9584 13.2503C41.9584 12.0307 40.9697 11.042 39.75 11.042C38.5304 11.042 37.5417 12.0307 37.5417 13.2503C37.5417 14.4699 38.5304 15.4587 39.75 15.4587Z"
+                                fill="#654A41" />
+                        </svg>
+                    </a>
+
+                    <!-- Twitter -->
+                    <a href="https://x.com/oliviarodrigo" target="_blank">
+                        <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M47.5648 13.9754C47.8545 13.6378 47.4768 13.1966 47.0483 13.3546C46.0919 13.7074 45.2179 13.94 43.9252 14.0837C45.5151 13.1984 46.2546 11.933 46.8561 10.3832C47.001 10.0094 46.5636 9.67016 46.1868 9.84874C44.6565 10.5743 43.0053 11.1127 41.2689 11.4307C39.5527 9.72983 37.1063 8.66699 34.4001 8.66699C29.2036 8.66699 24.9897 12.586 24.9897 17.4185C24.9897 18.1046 25.0737 18.7728 25.2323 19.4127C17.7624 19.0647 11.1016 15.8692 6.47393 10.9693C6.15676 10.6335 5.58122 10.6781 5.38373 11.0877C4.85689 12.1804 4.56317 13.3927 4.56317 14.669C4.56317 17.7047 6.22397 20.3831 8.74861 21.9526C7.61663 21.9185 6.53408 21.698 5.53646 21.3237C5.05074 21.1414 4.49395 21.4617 4.55921 21.9515C5.06021 25.7126 8.10528 28.8155 12.0358 29.5487C11.2465 29.7495 10.4151 29.8561 9.55511 29.8561C9.34659 29.8561 9.13987 29.8496 8.93503 29.8371C8.41379 29.8048 7.99017 30.271 8.21364 30.7172C9.68808 33.6599 12.8718 35.7144 16.5767 35.7783C13.3564 38.1261 9.29901 39.5249 4.88997 39.5249C4.34633 39.5249 4.11311 40.2238 4.59541 40.4609C8.32041 42.2919 12.5624 43.3337 17.0698 43.3337C34.3791 43.3337 43.8431 29.9985 43.8431 18.4334C43.8431 18.0548 43.8336 17.6762 43.8165 17.3012C45.2213 16.3574 46.4843 15.235 47.5648 13.9754Z"
+                                fill="#654A41" />
+                        </svg>
+                    </a>
+
+                    <!-- Youtube -->
+                    <a href="https://www.youtube.com/channel/UCy3zgWom-5AGypGX_FVTKpg" target="_blank">
+                        <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_52_489)">
+                                <path
+                                    d="M25.1599 6.24609C25.1776 6.24613 25.1968 6.24618 25.2174 6.24623L25.4386 6.24692C28.0067 6.25635 41.0227 6.3507 44.532 7.29416C46.6834 7.87118 48.3774 9.57166 48.9524 11.7302C49.2689 12.9161 49.4896 14.4924 49.6433 16.1135L49.6732 16.4382C49.6974 16.7091 49.7197 16.9807 49.7404 17.2512L49.7644 17.5753C49.9698 20.4318 49.9938 23.105 49.9966 23.6898L49.9969 23.7687C49.9969 23.7752 49.9969 23.7857 49.9969 23.7857V23.83C49.9969 23.83 49.9969 23.8406 49.9969 23.8471L49.9966 23.926C49.9937 24.5329 49.968 27.3888 49.7404 30.3648L49.7148 30.6898L49.6875 31.0152C49.5327 32.8044 49.3006 34.5812 48.9524 35.8856C48.3774 38.0441 46.6834 39.745 44.532 40.3216C40.9057 41.2969 27.1284 41.3652 25.2174 41.37L25.0702 41.3703C25.0581 41.3703 25.0475 41.3703 25.0384 41.3703L24.9784 41.3703C24.9784 41.3703 24.9646 41.3703 24.9554 41.3703L24.7764 41.37C23.8107 41.3676 19.8143 41.3489 15.6291 41.2052L15.094 41.1862C15.0047 41.1829 14.9154 41.1795 14.8261 41.1761L14.2904 41.155L13.7559 41.1323C10.2887 40.9801 6.98288 40.7306 5.46216 40.3216C3.31084 39.745 1.61679 38.0441 1.04181 35.8856C0.693478 34.5812 0.461257 32.8044 0.306442 31.0152L0.279139 30.6898L0.253489 30.3648C0.034073 27.497 0.00222224 24.7408 -0.00240126 24.001L-0.00295375 23.8951C-0.00299252 23.8856 -0.00302483 23.8768 -0.00305176 23.8688V23.747C-0.00302483 23.739 -0.00299252 23.7302 -0.00295375 23.7207L-0.00240126 23.6148C0.00178606 22.9448 0.0283057 20.621 0.196264 18.0582L0.218004 17.7367C0.221753 17.683 0.225565 17.6292 0.229442 17.5753L0.253489 17.2512C0.274189 16.9807 0.296558 16.7091 0.320731 16.4382L0.350613 16.1135C0.504438 14.4924 0.725145 12.9161 1.04181 11.7302C1.61679 9.57166 3.31084 7.87118 5.46216 7.29416C6.98288 6.88533 10.2887 6.63594 13.7559 6.48381L14.2904 6.46116L14.8261 6.44C14.9154 6.4366 15.0047 6.43325 15.094 6.42996L15.6291 6.41094C19.5471 6.27644 23.2997 6.25153 24.5552 6.24692L24.7764 6.24623C24.797 6.24618 24.8162 6.24613 24.8339 6.24609H25.1599ZM19.997 16.2811V31.3347L32.9869 23.8083L19.997 16.2811Z"
+                                    fill="#654A41" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_52_489">
+                                    <rect width="50" height="50" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+
+                    <!-- Spotify -->
+                    <a href="https://open.spotify.com/intl-es/artist/1McMsnEElThX1knmY4oliG?si=BlP443k-RyWpfcjzdAmcjw"
+                        target="_blank">
+                        <svg width="46" height="46" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_52_490)">
+                                <path
+                                    d="M22.9999 0C10.2977 0 0 10.2974 0 22.9996C0 35.7023 10.2977 45.9989 22.9999 45.9989C35.7034 45.9989 46 35.7023 46 22.9996C46 10.2982 35.7037 0 22.9999 0ZM33.5475 33.172C33.1355 33.8476 32.2511 34.0619 31.5755 33.6471C26.1753 30.3486 19.3773 29.6016 11.3713 31.4307C10.5998 31.6065 9.83076 31.1231 9.65498 30.3514C9.47838 29.5796 9.95984 28.8106 10.7333 28.6348C19.4945 26.6332 27.0097 27.495 33.0723 31.2C33.7479 31.6148 33.9622 32.4964 33.5475 33.172ZM36.3626 26.9095C35.8435 27.7532 34.7394 28.0196 33.8963 27.5005C27.7139 23.7005 18.2899 22.6 10.9774 24.8197C10.0291 25.1061 9.02741 24.5717 8.73958 23.625C8.45395 22.6766 8.98869 21.6769 9.9354 21.3885C18.2883 18.854 28.6724 20.0817 35.7721 24.4445C36.6153 24.9636 36.8817 26.0674 36.3626 26.9095ZM36.6043 20.3882C29.1915 15.9853 16.9614 15.5805 9.88404 17.7285C8.74755 18.0732 7.54568 17.4316 7.20127 16.2952C6.85687 15.1581 7.4979 13.9571 8.63521 13.6116C16.7596 11.1452 30.2654 11.6217 38.7998 16.6882C39.8243 17.2949 40.1593 18.6151 39.5524 19.636C38.9481 20.6582 37.6232 20.9952 36.6043 20.3882Z"
+                                    fill="#654A41" />
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_52_490">
+                                    <rect width="46" height="46" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </a>
+
+                </div>
+                <div class="btn-contactame">
+                    <a class="btn-dark" href="contacto.html">Contactame</a>
+                </div>
+                <div class="informacion-footer text-center">
+                    <p>Uma Santos & Camila Salinas</p>
+                    <p>Desarrollo II & Programación I</p>
+                    <p>1°2°A - 2026</p>
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

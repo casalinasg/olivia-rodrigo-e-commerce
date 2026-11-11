@@ -1,0 +1,346 @@
+/* CONTACTO */
+:root {
+    --marron: #654A41;
+    --texto-form: #2B1F1A;
+    --crema: #FFF2E7;
+    --campo: #FFFBF3;
+    /* fondo crema de los inputs (como en Figma) */
+    --rosa-boton: #FBD3E2;
+    --rosa-texto: #FF5C8A;
+    --error: #B3261E;
+    --tam-boton: 2.9rem;
+    --tam-icono: 1.6rem;
+}
+
+main {
+    font-family: 'Mali', cursive;
+}
+
+/* NAVBAR (fondo crema) */
+header,
+header nav,
+header .container {
+    background-color: var(--crema) !important;
+}
+
+header nav .dropdown>.btn,
+header nav .iconos-alineados-derecha a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--tam-boton);
+    height: var(--tam-boton);
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--marron);
+    --bs-btn-bg: var(--marron);
+    --bs-btn-hover-bg: var(--marron);
+    --bs-btn-active-bg: var(--marron);
+    --bs-btn-border-color: transparent;
+    --bs-btn-hover-border-color: transparent;
+    --bs-btn-active-border-color: transparent;
+}
+
+/* INTRO */
+.intro {
+    background-color: var(--crema);
+}
+
+.intro h1 {
+    color: var(--marron);
+    font-weight: 700;
+}
+
+.intro .subtitulo {
+    color: var(--marron);
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.intro p.mx-auto {
+    color: var(--marron);
+    max-width: 36rem;
+}
+
+/* FONDO CELESTE */
+.fondo-celeste {
+    background-color: #B3D2E6;
+    background-color: #B3D2E6;
+    /* respaldo mientras carga la imagen */
+    background-image: url("../img/fondo-con-nubes.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gracias {
+    color: var(--marron);
+    margin: 1.5rem 0 0;
+}
+
+/* SOBRE + FORMULARIO */
+.sobre-contacto {
+    position: relative;
+    max-width: 47rem;
+    margin: 0 auto;
+    padding-bottom: 3rem;
+    /* Proporción del PNG: reemplazá 5 / 8 por ANCHO / ALTO reales de carta-formulario.png. Si el contenido es más alto, el sobre crece solo. */
+    aspect-ratio: 5 / 8;
+}
+
+/* Capa de fondo: la imagen del sobre (con la hoja asomando) */
+.sobre-img {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background-image: url("../img/carta-formulario.png");
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 100% 100%;
+    pointer-events: none;
+}
+
+/* El formulario va encima, sin fondo propio. Los padding en % se calculan sobre el ANCHO del sobre, así el texto siempre queda dentro de la hoja. Ajustalos mirando el PNG. */
+.formulario {
+    position: relative;
+    z-index: 1;
+    padding: 9% 20% 36%;
+    color: var(--texto-form);
+}
+
+.formulario .form-label,
+.formulario legend {
+    float: none;
+    margin-bottom: 0.25rem;
+    color: var(--texto-form);
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Inputs: píldora crema como en el diseño */
+.formulario .form-control {
+    background-color: var(--campo);
+    border: none;
+    border-radius: 2rem;
+    box-shadow: none;
+    color: var(--texto-form);
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+}
+
+.formulario textarea.form-control {
+    border-radius: 1.5rem;
+    resize: none;
+}
+
+.formulario .form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 92, 138, 0.35);
+}
+
+/* Radios */
+.formulario .form-check {
+    margin-bottom: 0.15rem;
+}
+
+.formulario .form-check-input {
+    background-color: var(--campo);
+    border-color: var(--marron);
+}
+
+.formulario .form-check-input:checked {
+    background-color: var(--marron);
+    border-color: var(--marron);
+}
+
+.formulario .form-check-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(101, 74, 65, 0.25);
+}
+
+/* Mensajes de error */
+.formulario .invalid-feedback,
+#errorMotivo {
+    color: var(--error);
+}
+
+/* NUEVO: muestra siempre el texto de error (se oculta vaciándolo desde JS) */
+.formulario .invalid-feedback {
+    display: block;
+}
+
+/* NUEVO: campo con error, borde rojo visible sobre el fondo crema */
+.formulario .form-control.is-invalid {
+    border: 2px solid var(--error);
+    background-image: none;
+    /* saca el ícono de Bootstrap que se superpone al texto */
+}
+
+.contador {
+    color: var(--marron);
+    min-width: 4rem;
+}
+
+#resultado {
+    text-align: center;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    min-height: 1.25rem;
+}
+
+/* BOTÓN ENVIAR (óvalo rosa, Mali) */
+.btn-marron {
+    font-family: 'Mali', cursive;
+    font-weight: 700;
+    color: var(--marron);
+    background-color: var(--rosa-boton);
+    border: none;
+    border-radius: 5rem;
+    padding: 0.25rem 2rem;
+    cursor: pointer;
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-marron:hover,
+.btn-marron:focus-visible {
+    background-color: var(--rosa-texto);
+    color: #fff;
+}
+
+/* VENTANA DE CONFIRMACIÓN */
+/* Fondo semitransparente que cubre toda la pantalla y centra la ventana */
+/* 
+                        LO PASO A STYLES.CSS PARA COMPARTIRLO CON PRODUCTOS.CSS
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(43, 31, 26, 0.65);
+}
+*/
+/*  BOTONES     */
+/*
+.ventana-confirm .btn-marron,
+.ventana-confirm .btn-cancelar {
+    margin-top: 0;          
+    padding: 0.4rem 2rem;  
+    display: inline-block;
+}
+*/
+/* Cuadro de la ventana */
+/*
+.ventana-confirm {
+    width: 100%;
+    max-width: 26rem;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    font-family: 'Mali', cursive;
+    color: var(--marron);
+    background-color: var(--crema);
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+.ventana-confirm h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.botones-confirm {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+*/
+
+/* Botón secundario (mismo óvalo que Enviar pero sin relleno) */
+/*
+.btn-cancelar {
+    font-family: 'Mali', cursive;
+    font-weight: 700;
+    color: var(--marron);
+    background-color: transparent;
+    border: 2px solid var(--marron);
+    border-radius: 5rem;
+    padding: 0.25rem 2rem;
+    cursor: pointer;
+}
+ 
+.btn-cancelar:hover, .btn-cancelar:focus-visible {
+    background-color: var(--marron);
+    color: var(--crema);
+}
+*/
+
+/* NOTA RAYADA PARA MOSTRAR EL RESULTADO FINAL (no aparece como un pop up)*/
+/*.nota {
+    --renglon: 1.9rem;
+    --margen: 1.25rem;
+    --papel: #FEFEFC;
+    --linea: #B7D6EC;
+    --linea-margen: #F4B3C2;
+    width: min(88%, 38rem);
+    font-size: 1.05rem;
+    line-height: var(--renglon);
+    filter: drop-shadow(0 4px 6px rgba(101, 74, 65, 0.25));
+    font-family: 'Mali', cursive;
+    background-color: var(--papel);
+    background-image: linear-gradient(var(--linea) 1px, transparent 1px);
+    background-size: 100% var(--renglon);
+    background-position: 0 0.5rem;
+    border-left: 4px solid var(--linea-margen);
+    border-radius: 4px;
+    padding: 1rem var(--margen);
+    margin: 2rem auto;
+    text-align: left;
+    color: #654A41;
+}
+.nota strong {
+    color: #FF5C8A;
+}
+ */
+
+/* FORMULARIO EXITOSO  */
+
+.ventana-exito {
+    width: 100%;
+    max-width: 28rem;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.35));
+}
+
+.hoja-exito {
+    --renglon: 1.9rem;
+    --margen: 1.1rem;
+    --papel: #FEFEFC;
+    --linea: #B7D6EC;
+    --linea-margen: #F4B3C2;
+    padding: calc(var(--renglon) * 2) 2.5rem var(--renglon) 2.25rem;
+    font-family: 'Mali', cursive;
+    font-size: 1.05rem;
+    line-height: var(--renglon);
+    color: var(--marron);
+    text-align: left;
+    background-color: var(--papel);
+    background-image:
+        linear-gradient(to right, transparent var(--margen), var(--linea-margen) var(--margen),
+            var(--linea-margen) calc(var(--margen) + 2px), transparent calc(var(--margen) + 2px)),
+        linear-gradient(to bottom, transparent calc(100% - 2px), var(--linea) calc(100% - 2px));
+    background-size: 100% 100%, 100% var(--renglon);
+    background-repeat: no-repeat, repeat-y;
+    clip-path: polygon(0 0, 100% 0, 98.8% 3%, 99.8% 6%, 98.2% 9%, 99.6% 12%, 98.5% 15%, 100% 18%, 98.4% 21%, 99.5% 24%, 98.1% 27%, 99.7% 30%, 98.6% 33%, 99.9% 36%, 98.3% 39%, 99.4% 42%, 98.2% 45%, 99.8% 48%, 98.7% 51%, 99.6% 54%, 98.2% 57%, 99.9% 60%, 98.5% 63%, 99.5% 66%, 98.3% 69%, 99.8% 72%, 98.6% 75%, 99.4% 78%, 98.2% 81%, 99.7% 84%, 98.5% 87%, 99.9% 90%, 98.4% 93%, 99.5% 96%, 98.8% 100%, 0 100%);
+}
+
+.hoja-exito h2 {
+    margin: 0 0 var(--renglon);
+    color: var(--rosa-texto);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: var(--renglon);
+}
+
+.hoja-exito p {
+    margin: 0 0 var(--renglon);
+}

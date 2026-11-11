@@ -1,0 +1,281 @@
+/*      GENERAL     */
+body {
+    background-color: #CFC6E3;
+}
+
+/* Todo lo que está dentro de <main> usa la tipografía Mali.
+   Los botones la heredan porque Bootstrap les pone font-family: inherit. */
+main {
+    font-family: 'Mali', cursive;
+}
+
+/* Ancho máximo del contenido, centrado. Se reutiliza en todas las secciones. */
+.contenedor-productos {
+    max-width: 40rem;
+    margin: 0 auto;
+}
+
+.titulo-seccion {
+    color: #654A41;
+}
+
+/*      HERO    */
+
+.hero {
+    background-image: url("../img/fondo-con-nubes.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 45rem;
+}
+
+.contenedor-hero {
+    padding-top: 1rem;
+}
+
+.texto-hero h1 {
+    font-size: 1.25rem;          /* celular */
+}
+
+.subtitulo-hero {
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.texto-hero .botones {
+    margin-top: 1.5rem;
+}
+
+@media (min-width: 768px) {      /* computadora */
+    .texto-hero h1 {
+        font-size: 2.5rem;
+    }
+}
+/* HERO MOBILE: vinilo arriba a todo el ancho, textos y botones abajo */
+@media (max-width: 767.98px) {
+    .hero {
+        min-height: 0;
+        padding-bottom: 3rem;
+    }
+
+    .contenedor-hero img {
+        width: 100%;
+    }
+
+    .texto-hero {
+        margin-top: 1.5rem;
+        text-align: left;
+    }
+
+    .texto-hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .texto-hero p {
+        font-size: 1.35rem;
+    }
+
+    .texto-hero .botones {
+        align-items: stretch;
+    }
+}
+
+/*      MÚSICA (vinilos y CDs)     */
+.musica {
+    padding: 2rem 0;
+}
+
+.estrella {
+    color: #654A41;
+    font-size: 3rem;
+    line-height: 1;
+    margin: 0;
+    text-align: center;
+}
+
+.musica h3 {
+    color: #654A41;
+    font-size: 1.25rem;
+    margin-top: 2rem;
+}
+
+.tarjeta-disco {
+    max-width: 20rem;
+    margin: 0 auto;
+}
+
+.tarjeta-disco .imagen-disco {
+    width: 100%;
+    max-width: 20rem;
+    height: auto;
+}
+
+.nombre-producto,
+.precio-producto {
+    font-weight: 700;
+    margin: 0.5rem 0;
+}
+
+.precio-producto {
+    white-space: nowrap;    /* el precio nunca se parte en dos renglones */
+}
+
+.tarjeta-disco .btn-light-pink {
+    padding: 0.25rem 2rem;
+}
+
+/* Botones + y - con el número en un círculo */
+.control-cantidad {
+    margin: 0.5rem 0;
+}
+
+.boton-cantidad {
+    background: none;
+    border: none;
+    color: #654A41;
+    font-size: 1.25rem;
+    padding: 0 0.25rem;
+}
+
+/* El círculo es un <input>: se puede escribir un número a mano */
+.numero-cantidad {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #F3EDF9;
+    color: #654A41;
+    font-weight: 700;
+    text-align: center;
+}
+
+/*      MERCH       */
+.merch {
+    background-color: #FFF2E7;
+    padding: 2rem 0;
+}
+
+.merch .titulo-seccion {
+    margin-bottom: 1.5rem;
+}
+
+.tarjeta-merch {
+    background-color: #C9BCE4;
+    border-radius: 1rem;
+    padding: 0.75rem;
+}
+
+.imagen-merch {
+    display: block;
+    margin: 0 auto;
+}
+
+.precio-merch {
+    color: #040000;
+    font-weight: 700;
+    margin: 0.5rem 0 0.25rem 0;
+}
+
+.tarjeta-merch .btn-light-pink {
+    padding: 0 1rem;
+    font-size: 0.875rem;
+}
+
+/*      TU CARRITO      */
+.carrito {
+    background-color: #FFF2E7;
+    padding: 1rem 0;
+}
+
+/* Las filas del carrito empiezan escondidas (style="display: none" en el HTML).
+   El JS las muestra con style.display = "flex" */
+.item-carrito {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background-color: #B3D2E6;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.datos-item {
+    flex-grow: 1;
+}
+
+.campo-lectura {
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    pointer-events: none;
+}
+
+.imagen-carrito {
+    width: 30%;
+    max-width: 8rem;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.nombre-item {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.chip-cantidad {
+    width: 4.5rem;
+    background-color: #FBD3E2;
+    color: #FF5C8A;
+    border-radius: 5rem;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.item-carrito .btn-dark {
+    padding: 0.25rem 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.precio-item {
+    width: 50%;
+    font-weight: 700;
+    text-align: right;
+}
+
+/*      RESUMEN DE COMPRA       */
+.resumen {
+    background-color: #FFF2E7;
+    padding-bottom: 2rem;
+}
+
+.resumen h2 {
+    font-size: 1.5rem;
+}
+
+.tarjeta-resumen {
+    background-color: #B3D2E6;
+    border-radius: 1rem;
+    padding: 1.5rem;
+}
+
+.fila-total {
+    margin-bottom: 1rem;
+}
+
+.texto-total {
+    color: #654A41;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.campo-total {
+    width: 50%;
+    text-align: right;
+}
+
+.botones-resumen .btn-light-pink,
+.botones-resumen .btn-dark {
+    padding: 0.25rem 2rem;
+}
