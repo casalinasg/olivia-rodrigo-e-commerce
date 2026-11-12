@@ -376,6 +376,25 @@ function actualizarCarrito() {
         seccionCarrito.style.display = "block";
         seccionResumen.style.display = "block";
     }
+
+    // Actualiza el globito del carrito en el header
+    let totalUnidades = unidadesDeLista(vinilo) + unidadesDeLista(cd) + unidadesDeLista(merch);
+    let contador = document.getElementById("contador-carrito");
+
+    if (totalUnidades === 0) {
+        contador.style.display = "none";
+    } else {
+        contador.style.display = "flex";
+        contador.value = totalUnidades;
+    }
+}
+/* Suma las unidades de todos los productos de UNA lista (cd, vinilo o merch). */
+function unidadesDeLista(lista) {
+    let unidades = 0;
+    for (let i = 0; i < lista.length; i++) {
+        unidades = unidades + lista[i].enCarrito;
+    }
+    return unidades;
 }
 
 

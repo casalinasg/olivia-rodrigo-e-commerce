@@ -1,6 +1,6 @@
 /*      GENERAL     */
 body {
-    background-color: #CFC6E3;
+    background-color: #FFF2E7;
 }
 
 /* Todo lo que está dentro de <main> usa la tipografía Mali.
@@ -9,9 +9,19 @@ main {
     font-family: 'Mali', cursive;
 }
 
+header{
+    background-color: #B3D2E6;
+}
+
+/*
+nav {
+      background-color: rgba(156, 219, 242, 0.2);
+}
+*/
+
 /* Ancho máximo del contenido, centrado. Se reutiliza en todas las secciones. */
 .contenedor-productos {
-    max-width: 40rem;
+    max-width: 70rem;
     margin: 0 auto;
 }
 
@@ -137,14 +147,14 @@ main {
     padding: 0 0.25rem;
 }
 
-/* El círculo es un <input>: se puede escribir un número a mano */
+/*input para que el usuairo ingrese la cantidad que prefiera*/
 .numero-cantidad {
     width: 2.5rem;
     height: 2.5rem;
     padding: 0;
     border: none;
     border-radius: 50%;
-    background-color: #F3EDF9;
+    background-color: #CFC6E3;
     color: #654A41;
     font-weight: 700;
     text-align: center;
@@ -152,7 +162,6 @@ main {
 
 /*      MERCH       */
 .merch {
-    background-color: #FFF2E7;
     padding: 2rem 0;
 }
 
@@ -161,8 +170,6 @@ main {
 }
 
 .tarjeta-merch {
-    background-color: #C9BCE4;
-    border-radius: 1rem;
     padding: 0.75rem;
 }
 

@@ -15,69 +15,71 @@
 
 <body>
     <header>
+        <div class="barra-navegacion container justify-content-space-between">
+            <nav class="d-flex justify-content-around align-items-center p-3 fixed-top">
+                <!-- Menú desplegable -->
+                <div class="dropdown">
+                    <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <!-- Menú ícono -->
+                        <svg width="47" height="47" viewBox="0 0 47 47" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7.80005 11.7002H39" stroke-width="3.9" stroke-linecap="round"
+                                stroke-linejoin="round" stroke="#FFF2E7" />
+                            <path d="M7.80005 23.3999H39" stroke-width="3.9" stroke-linecap="round"
+                                stroke-linejoin="round" stroke="#FFF2E7" />
+                            <path d="M7.80005 35.1001H39" stroke-width="3.9" stroke-linecap="round"
+                                stroke-linejoin="round" stroke="#FFF2E7" />
+                        </svg>
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Home</a></li>
+                        <li><a class="dropdown-item" href="conoce-mas.html">Conocé más</a></li>
+                        <li><a class="dropdown-item" href="productos.html">Productos</a></li>
+                        <li><a class="dropdown-item" href="tour.html">Tour</a></li>
+                        <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+    
+                <!--Logo-->
+                <a href="index.html">
+                    <img src="img/Logo-OR-negro.png" alt="Logo">
+                </a>
+    
+                <div class="iconos-alineados-derecha d-flex justify-content-end gap-2">
+                    <!--Cart ícono-->
+                    <a href="#seccion-carrito" class="enlace-carrito">
+                        <svg width="54" height="54" viewBox="0 0 54 54" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M40.5 43.875C40.5 45.739 38.989 47.25 37.125 47.25C35.261 47.25 33.75 45.739 33.75 43.875C33.75 42.011 35.261 40.5 37.125 40.5C38.989 40.5 40.5 42.011 40.5 43.875Z"
+                                stroke-width="3.375" stroke-linecap="round" stroke-linejoin="round"
+                                stroke="#FFF2E7" />
+                            <path
+                                d="M22.5 43.875C22.5 45.739 20.9889 47.25 19.125 47.25C17.261 47.25 15.75 45.739 15.75 43.875C15.75 42.011 17.261 40.5 19.125 40.5C20.9889 40.5 22.5 42.011 22.5 43.875Z"
+                                stroke-width="3.375" stroke-linecap="round" stroke-linejoin="round"
+                                stroke="#FFF2E7" />
+                            <path
+                                d="M8.3454 12.15H42.5791C45.6789 12.15 47.9177 15.0088 47.0686 17.8826L43.346 30.4826C42.7747 32.4163 40.9422 33.75 38.8565 33.75H18.2512C16.1656 33.75 14.333 32.4163 13.7617 30.4826L8.3454 12.15ZM8.3454 12.15L6.75 6.75"
+                                stroke-width="3.375" stroke-linecap="round" stroke-linejoin="round"
+                                stroke="#FFF2E7" />
+                        </svg>
+                        <output id="contador-carrito" class="contador-carrito" style="display: none">0</output>
+                    </a>
+    
+                    <!--Search ícono-->
+                    <a href="#">
+                        <svg width="58" height="58" viewBox="0 0 58 58" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M37.8257 34.4594L45.3269 41.9606C46.2355 42.8692 46.241 44.3819 45.3114 45.3114C44.3753 46.2475 42.8816 46.248 41.9606 45.327L34.4593 37.8257C32.1246 39.4883 29.2685 40.4661 26.1839 40.4661C18.2961 40.4661 11.9018 34.0718 11.9018 26.184C11.9018 18.2962 18.2961 11.9019 26.1839 11.9019C34.0718 11.9019 40.4661 18.2962 40.4661 26.184C40.4661 29.2685 39.4883 32.1247 37.8257 34.4594ZM26.1839 36.8956C32.0998 36.8956 36.8955 32.0999 36.8955 26.184C36.8955 20.2681 32.0998 15.4724 26.1839 15.4724C20.2681 15.4724 15.4723 20.2681 15.4723 26.184C15.4723 32.0999 20.2681 36.8956 26.1839 36.8956Z"
+                                fill="#FFF2E7" />
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </div>
         <div class="hero">
             <div class="container">
-                <nav class="d-flex justify-content-between align-items-center p-3">
-                    <!-- Menú desplegable -->
-                    <div class="dropdown">
-                        <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            <!-- Menú ícono -->
-                            <svg width="47" height="47" viewBox="0 0 47 47" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path d="M7.80005 11.7002H39" stroke-width="3.9" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke="#FFF2E7" />
-                                <path d="M7.80005 23.3999H39" stroke-width="3.9" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke="#FFF2E7" />
-                                <path d="M7.80005 35.1001H39" stroke-width="3.9" stroke-linecap="round"
-                                    stroke-linejoin="round" stroke="#FFF2E7" />
-                            </svg>
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="index.html">Home</a></li>
-                            <li><a class="dropdown-item" href="conoce-mas.html">Conocé más</a></li>
-                            <li><a class="dropdown-item" href="productos.html">Productos</a></li>
-                            <li><a class="dropdown-item" href="tour.html">Tour</a></li>
-                            <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
-                        </ul>
-                    </div>
-
-                    <!--Logo-->
-                    <a href="index.html">
-                        <img src="img/Logo-OR-negro.png" alt="Logo">
-                    </a>
-
-                    <div class="iconos-alineados-derecha d-flex justify-content-end gap-2">
-                        <!--Cart ícono-->
-                        <a href="productos.html">
-                            <svg width="54" height="54" viewBox="0 0 54 54" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M40.5 43.875C40.5 45.739 38.989 47.25 37.125 47.25C35.261 47.25 33.75 45.739 33.75 43.875C33.75 42.011 35.261 40.5 37.125 40.5C38.989 40.5 40.5 42.011 40.5 43.875Z"
-                                    stroke-width="3.375" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke="#FFF2E7" />
-                                <path
-                                    d="M22.5 43.875C22.5 45.739 20.9889 47.25 19.125 47.25C17.261 47.25 15.75 45.739 15.75 43.875C15.75 42.011 17.261 40.5 19.125 40.5C20.9889 40.5 22.5 42.011 22.5 43.875Z"
-                                    stroke-width="3.375" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke="#FFF2E7" />
-                                <path
-                                    d="M8.3454 12.15H42.5791C45.6789 12.15 47.9177 15.0088 47.0686 17.8826L43.346 30.4826C42.7747 32.4163 40.9422 33.75 38.8565 33.75H18.2512C16.1656 33.75 14.333 32.4163 13.7617 30.4826L8.3454 12.15ZM8.3454 12.15L6.75 6.75"
-                                    stroke-width="3.375" stroke-linecap="round" stroke-linejoin="round"
-                                    stroke="#FFF2E7" />
-                            </svg>
-                        </a>
-
-                        <!--Search ícono-->
-                        <a href="#">
-                            <svg width="58" height="58" viewBox="0 0 58 58" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M37.8257 34.4594L45.3269 41.9606C46.2355 42.8692 46.241 44.3819 45.3114 45.3114C44.3753 46.2475 42.8816 46.248 41.9606 45.327L34.4593 37.8257C32.1246 39.4883 29.2685 40.4661 26.1839 40.4661C18.2961 40.4661 11.9018 34.0718 11.9018 26.184C11.9018 18.2962 18.2961 11.9019 26.1839 11.9019C34.0718 11.9019 40.4661 18.2962 40.4661 26.184C40.4661 29.2685 39.4883 32.1247 37.8257 34.4594ZM26.1839 36.8956C32.0998 36.8956 36.8955 32.0999 36.8955 26.184C36.8955 20.2681 32.0998 15.4724 26.1839 15.4724C20.2681 15.4724 15.4723 20.2681 15.4723 26.184C15.4723 32.0999 20.2681 36.8956 26.1839 36.8956Z"
-                                    fill="#FFF2E7" />
-                            </svg>
-                        </a>
-                    </div>
-                </nav>
-
                 <div class="hero-content row align-items-center pt-4">
                     <div class="contenedor-hero col-12 col-md-6">
                         <img class="img-fluid" src="img/vinilo-yspsfagsil.png"
@@ -101,7 +103,7 @@
 
 
     <main>
-        <!-- MÚSICA -->
+              <!-- MÚSICA -->
         <section class="musica" id="musica">
             <div class="container">
                 <div class="text-center">
@@ -112,129 +114,98 @@
                 <div class="contenedor-productos">
                     <h3>Vinilos</h3>
                     <!-- Cada producto tiene su id (vinilo-0, vinilo-1, ...) que coincide con el de carrito.js.
-                         El onclick le pasa a la función el producto de la matriz: agregar(vinilo[0]) -->
-                        <div id="carousel-vinilo" class="carousel slide">
-                            <div class="carousel-inner">
-                            <article class="carousel-item active">
-                                <div class="tarjeta-disco">
-                                    <img class="imagen-disco d-block mx-auto" src="img/vinilo-sour.png" alt="Vinilo de SOUR">
-                                    <div class="d-flex justify-content-between gap-3">
-                                        <p class="nombre-producto">SOUR</p>
-                                        <p class="precio-producto">$150.000</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-light-pink" onclick="agregar(vinilo[0])">Comprar</button>
-                                        <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
-                                            <button type="button" class="boton-cantidad" onclick="restar(vinilo[0])" aria-label="Restar una unidad">-</button>
-                                            <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-vinilo-0" value="1" aria-label="Cantidad de SOUR (Vinilo)">
-                                            <button type="button" class="boton-cantidad" onclick="sumar(vinilo[0])" aria-label="Sumar una unidad">+</button>
-                                        </div>
-                                    </div>
+                         El onclick le pasa a la función el producto de la matriz: agregar(vinilo[0]).
+                         row-cols-1 = una tarjeta por fila en celular. row-cols-md-3 = tres por fila en computadora. -->
+                    <div class="row row-cols-1 row-cols-md-3 g-3">
+                        <div class="col">
+                            <article class="tarjeta-disco h-100 text-center">
+                                <div class="ratio ratio-4x3">
+                                    <img class="object-fit-contain" src="img/vinilo-sour.png" alt="Vinilo de SOUR">
+                                </div>
+                                <p class="precio-producto">$150.000</p>
+                                <button type="button" class="btn-light-pink" onclick="agregar(vinilo[0])">Comprar</button>
+                                <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
+                                    <button type="button" class="boton-cantidad" onclick="restar(vinilo[0])" aria-label="Restar una unidad">-</button>
+                                    <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-vinilo-0" value="1" aria-label="Cantidad de SOUR (Vinilo)">
+                                    <button type="button" class="boton-cantidad" onclick="sumar(vinilo[0])" aria-label="Sumar una unidad">+</button>
                                 </div>
                             </article>
-                            <article class="carousel-item">
-                                <div class="tarjeta-disco">
-                                    <img class="imagen-disco d-block mx-auto" src="img/vinilo-guts.png" alt="Vinilo de GUTS">
-                                    <div class="d-flex justify-content-between gap-3">
-                                        <p class="nombre-producto">GUTS</p>
-                                        <p class="precio-producto">$120.000</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-light-pink" onclick="agregar(vinilo[1])">Comprar</button>
-                                        <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
-                                            <button type="button" class="boton-cantidad" onclick="restar(vinilo[1])" aria-label="Restar una unidad">-</button>
-                                            <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-vinilo-1" value="1" aria-label="Cantidad de GUTS (Vinilo)">
-                                            <button type="button" class="boton-cantidad" onclick="sumar(vinilo[1])" aria-label="Sumar una unidad">+</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="carousel-item">
-                                <div class="tarjeta-disco">
-                                    <img class="imagen-disco d-block mx-auto" src="img/vinilo-yspsfagsil.png" alt="Vinilo de You seem pretty sad for a girl so in love">
-                                    <div class="d-flex justify-content-between gap-3">
-                                        <p class="nombre-producto">You seem pretty sad for a girl so in love</p>
-                                        <p class="precio-producto">$200.000</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-light-pink" onclick="agregar(vinilo[2])">Comprar</button>
-                                        <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
-                                            <button type="button" class="boton-cantidad" onclick="restar(vinilo[2])" aria-label="Restar una unidad">-</button>
-                                            <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-vinilo-2" value="1" aria-label="Cantidad de You seem pretty sad for a girl so in love (Vinilo)">
-                                            <button type="button" class="boton-cantidad" onclick="sumar(vinilo[2])" aria-label="Sumar una unidad">+</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            </div>
-                            <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carousel-vinilo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Producto 1"></button>
-                            <button type="button" data-bs-target="#carousel-vinilo" data-bs-slide-to="1" aria-label="Producto 2"></button>
-                            <button type="button" data-bs-target="#carousel-vinilo" data-bs-slide-to="2" aria-label="Producto 3"></button>
-                            </div>
                         </div>
+                        <div class="col">
+                            <article class="tarjeta-disco h-100 text-center">
+                                <div class="ratio ratio-4x3">
+                                    <img class="object-fit-contain" src="img/vinilo-guts.png" alt="Vinilo de GUTS">
+                                </div>
+                                <p class="precio-producto">$120.000</p>
+                                <button type="button" class="btn-light-pink" onclick="agregar(vinilo[1])">Comprar</button>
+                                <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
+                                    <button type="button" class="boton-cantidad" onclick="restar(vinilo[1])" aria-label="Restar una unidad">-</button>
+                                    <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-vinilo-1" value="1" aria-label="Cantidad de GUTS (Vinilo)">
+                                    <button type="button" class="boton-cantidad" onclick="sumar(vinilo[1])" aria-label="Sumar una unidad">+</button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="tarjeta-disco h-100 text-center">
+                                <div class="ratio ratio-4x3">
+                                    <img class="object-fit-contain" src="img/vinilo-yspsfagsil.png" alt="Vinilo de You seem pretty sad for a girl so in love">
+                                </div>
+                                <p class="precio-producto">$200.000</p>
+                                <button type="button" class="btn-light-pink" onclick="agregar(vinilo[2])">Comprar</button>
+                                <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
+                                    <button type="button" class="boton-cantidad" onclick="restar(vinilo[2])" aria-label="Restar una unidad">-</button>
+                                    <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-vinilo-2" value="1" aria-label="Cantidad de You seem pretty sad for a girl so in love (Vinilo)">
+                                    <button type="button" class="boton-cantidad" onclick="sumar(vinilo[2])" aria-label="Sumar una unidad">+</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
 
                     <h3>CDS</h3>
-                        <div id="carousel-cd" class="carousel slide">
-                            <div class="carousel-inner">
-                            <article class="carousel-item active">
-                                <div class="tarjeta-disco">
-                                    <img class="imagen-disco d-block mx-auto" src="img/cd-sour.png" alt="CD de SOUR">
-                                    <div class="d-flex justify-content-between gap-3">
-                                        <p class="nombre-producto">SOUR</p>
-                                        <p class="precio-producto">$40.000</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-light-pink" onclick="agregar(cd[0])">Comprar</button>
-                                        <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
-                                            <button type="button" class="boton-cantidad" onclick="restar(cd[0])" aria-label="Restar una unidad">-</button>
-                                            <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-cd-0" value="1" aria-label="Cantidad de SOUR (CD)">
-                                            <button type="button" class="boton-cantidad" onclick="sumar(cd[0])" aria-label="Sumar una unidad">+</button>
-                                        </div>
-                                    </div>
+                    <div class="row row-cols-1 row-cols-md-3 g-3">
+                        <div class="col">
+                            <article class="tarjeta-disco h-100 text-center">
+                                <div class="ratio ratio-1x1">
+                                    <img class="object-fit-contain" src="img/cd-sour.png" alt="CD de SOUR">
+                                </div>
+                                <p class="precio-producto">$40.000</p>
+                                <button type="button" class="btn-light-pink" onclick="agregar(cd[0])">Comprar</button>
+                                <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
+                                    <button type="button" class="boton-cantidad" onclick="restar(cd[0])" aria-label="Restar una unidad">-</button>
+                                    <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-cd-0" value="1" aria-label="Cantidad de SOUR (CD)">
+                                    <button type="button" class="boton-cantidad" onclick="sumar(cd[0])" aria-label="Sumar una unidad">+</button>
                                 </div>
                             </article>
-                            <article class="carousel-item">
-                                <div class="tarjeta-disco">
-                                    <img class="imagen-disco d-block mx-auto" src="img/cd-guts.png" alt="CD de GUTS">
-                                    <div class="d-flex justify-content-between gap-3">
-                                        <p class="nombre-producto">GUTS</p>
-                                        <p class="precio-producto">$20.000</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-light-pink" onclick="agregar(cd[1])">Comprar</button>
-                                        <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
-                                            <button type="button" class="boton-cantidad" onclick="restar(cd[1])" aria-label="Restar una unidad">-</button>
-                                            <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-cd-1" value="1" aria-label="Cantidad de GUTS (CD)">
-                                            <button type="button" class="boton-cantidad" onclick="sumar(cd[1])" aria-label="Sumar una unidad">+</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            <article class="carousel-item">
-                                <div class="tarjeta-disco">
-                                    <img class="imagen-disco d-block mx-auto" src="img/cd-yspsfagsil.png" alt="CD de You seem pretty sad for a girl so in love">
-                                    <div class="d-flex justify-content-between gap-3">
-                                        <p class="nombre-producto">You seem pretty sad for a girl so in love</p>
-                                        <p class="precio-producto">$50.000</p>
-                                    </div>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn-light-pink" onclick="agregar(cd[2])">Comprar</button>
-                                        <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
-                                            <button type="button" class="boton-cantidad" onclick="restar(cd[2])" aria-label="Restar una unidad">-</button>
-                                            <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-cd-2" value="1" aria-label="Cantidad de You seem pretty sad for a girl so in love (CD)">
-                                            <button type="button" class="boton-cantidad" onclick="sumar(cd[2])" aria-label="Sumar una unidad">+</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-                            </div>
-                            <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#carousel-cd" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Producto 1"></button>
-                            <button type="button" data-bs-target="#carousel-cd" data-bs-slide-to="1" aria-label="Producto 2"></button>
-                            <button type="button" data-bs-target="#carousel-cd" data-bs-slide-to="2" aria-label="Producto 3"></button>
-                            </div>
                         </div>
+                        <div class="col">
+                            <article class="tarjeta-disco h-100 text-center">
+                                <div class="ratio ratio-1x1">
+                                    <img class="object-fit-contain" src="img/cd-guts.png" alt="CD de GUTS">
+                                </div>
+                                <p class="precio-producto">$20.000</p>
+                                <button type="button" class="btn-light-pink" onclick="agregar(cd[1])">Comprar</button>
+                                <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
+                                    <button type="button" class="boton-cantidad" onclick="restar(cd[1])" aria-label="Restar una unidad">-</button>
+                                    <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-cd-1" value="1" aria-label="Cantidad de GUTS (CD)">
+                                    <button type="button" class="boton-cantidad" onclick="sumar(cd[1])" aria-label="Sumar una unidad">+</button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="col">
+                            <article class="tarjeta-disco h-100 text-center">
+                                <div class="ratio ratio-1x1">
+                                    <img class="object-fit-contain" src="img/cd-yspsfagsil.png" alt="CD de You seem pretty sad for a girl so in love">
+                                </div>
+                                <p class="precio-producto">$50.000</p>
+                                <button type="button" class="btn-light-pink" onclick="agregar(cd[2])">Comprar</button>
+                                <div class="control-cantidad d-flex justify-content-center align-items-center gap-2">
+                                    <button type="button" class="boton-cantidad" onclick="restar(cd[2])" aria-label="Restar una unidad">-</button>
+                                    <input type="text" inputmode="numeric" class="numero-cantidad" id="cantidad-cd-2" value="1" aria-label="Cantidad de You seem pretty sad for a girl so in love (CD)">
+                                    <button type="button" class="boton-cantidad" onclick="sumar(cd[2])" aria-label="Sumar una unidad">+</button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

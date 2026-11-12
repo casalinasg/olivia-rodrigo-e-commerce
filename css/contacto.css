@@ -16,32 +16,6 @@ main {
     font-family: 'Mali', cursive;
 }
 
-/* NAVBAR (fondo crema) */
-header,
-header nav,
-header .container {
-    background-color: var(--crema) !important;
-}
-
-header nav .dropdown>.btn,
-header nav .iconos-alineados-derecha a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: var(--tam-boton);
-    height: var(--tam-boton);
-    padding: 0;
-    border: 0;
-    border-radius: 50%;
-    background-color: var(--marron);
-    --bs-btn-bg: var(--marron);
-    --bs-btn-hover-bg: var(--marron);
-    --bs-btn-active-bg: var(--marron);
-    --bs-btn-border-color: transparent;
-    --bs-btn-hover-border-color: transparent;
-    --bs-btn-active-border-color: transparent;
-}
-
 /* INTRO */
 .intro {
     background-color: var(--crema);

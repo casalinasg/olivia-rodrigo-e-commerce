@@ -16,8 +16,8 @@
 <body>
     <!--  BARRA DE NAVEGACIÓN  -->
     <header>
-        <div class="hero container">
-            <nav class="d-flex justify-content-between align-items-center p-3">
+        <div class="barra-navegacion container justify-content-space-between">
+            <nav class="d-flex justify-content-around align-items-center p-3 fixed-top">
                 <!-- Menú desplegable -->
                 <div class="dropdown">
                     <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -39,13 +39,13 @@
                         <li><a class="dropdown-item" href="contacto.html">Contacto</a></li>
                     </ul>
                 </div>
- 
+
                 <!--Logo-->
                 <a href="index.html">
                     <img src="img/Logo-OR-negro.png" alt="Logo">
                 </a>
- 
-                <div class="iconos-alineados-derecha">
+
+                <div class="iconos-alineados-derecha d-flex justify-content-end gap-2">
                     <!--Cart ícono-->
                     <a href="productos.html">
                         <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +60,7 @@
                                 stroke-width="3.375" stroke-linecap="round" stroke-linejoin="round" stroke="#FFF2E7" />
                         </svg>
                     </a>
- 
+
                     <!--Search ícono-->
                     <a href="#">
                         <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,10 +76,12 @@
  
     <main>
         <section class="intro text-center py-5">
-            <h1>Hablemos ♡</h1>
-            <p class="subtitulo">¿Tenés alguna consulta? Nos encantaría leerte.</p>
-            <p class="mx-auto">Elegí el motivo de tu mensaje y nuestro equipo te ayudará a encontrar la información que
-                necesitás.</p>
+            <div class="hero">
+                <h1>Hablemos ♡</h1>
+                <p class="subtitulo">¿Tenés alguna consulta? Nos encantaría leerte.</p>
+                <p class="mx-auto">Elegí el motivo de tu mensaje y nuestro equipo te ayudará a encontrar la información que
+                    necesitás.</p>
+            </div>
         </section>
  
         <div class="fondo-celeste py-5">
