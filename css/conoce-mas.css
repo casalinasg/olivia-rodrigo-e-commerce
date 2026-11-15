@@ -345,7 +345,7 @@ main {
     width: var(--ancho);
     max-width: 100%;
     height: auto;
-    margin-bottom: calc(-3rem - var(--ancho) * 0.15);
+    margin-bottom: calc(-5rem - var(--ancho) * 0.15);
     margin-left: 4vw;
     pointer-events: none;
 }
