@@ -5,22 +5,28 @@
 
 /*    HERO SECTION   */
 .hero {
-    background-image: url('../img/hero-section-olivia.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-height: 30rem;           /* celular: 480px aprox. */
+  background-image: url('../img/hero-section-olivia.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 30rem;
+  /* celular: 480px aprox. */
 }
 
 h1 {
   color: #654A41;
-  font-size: 1.75rem;      /* celular */
-  max-width: 12em;         /* fuerza el corte en dos renglones */
+  font-size: 1.75rem;
+  /* celular */
+  max-width: 12em;
+  /* fuerza el corte en dos renglones */
 }
 
-@media (min-width: 768px) {    /* computadora */
+@media (min-width: 768px) {
+
+  /* computadora */
   .hero {
-    min-height: 40rem;         /* 640px aprox. */
+    min-height: 40rem;
+    /* 640px aprox. */
   }
 
   .hero-content h1 {
@@ -39,11 +45,16 @@ h1 {
 
 .boton-conoceme {
   position: relative;
-  z-index: 1;                /* queda por encima de la carta */
-  width: 52%;                /* mismo ancho que la carta */
-  margin: -1.5rem 0 0 0;   /* sube sobre la carta y arranca donde ella empieza */
-  margin-left: 25%;               /* celular: compensa el margen negativo de la carta */
-  text-align: center;        /* centra el botón bajo la carta */
+  z-index: 1;
+  /* queda por encima de la carta */
+  width: 52%;
+  /* mismo ancho que la carta */
+  margin: -1.5rem 0 0 0;
+  /* sube sobre la carta y arranca donde ella empieza */
+  margin-left: 25%;
+  /* celular: compensa el margen negativo de la carta */
+  text-align: center;
+  /* centra el botón bajo la carta */
 }
 
 /*  Lo muevo styles.css para que se comparta con conoce-más
@@ -73,28 +84,32 @@ h1 {
 
 
 /*    PRODUCTOS   */
-.titulo-productos{
+.titulo-productos {
   color: #654A41;
   font-weight: bold;
   margin-bottom: 1rem;
 }
 
-  /*      FONDO CELESTE       */
+/*      FONDO CELESTE       */
 .fondo-celeste {
-    background-color: #B3D2E6;        /* respaldo mientras carga la imagen */
-    background-image: url("../img/fondo-con-nubes.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+  background-color: #B3D2E6;
+  /* respaldo mientras carga la imagen */
+  background-image: url("../img/fondo-con-nubes.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
+
+
 
 .productos {
   padding: 4%;
-  margin-bottom:2%
+  margin-bottom: 2%
 }
 
 /*    RESEÑAS   */
-.resenias{
+.resenias {
   padding-bottom: 8%;
 }
 
@@ -102,15 +117,18 @@ h1 {
   background-image: url('../img/sobre-resenias.png');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  max-width: 40rem;           
-  margin: 0 auto;              /* lo centra */
-  min-height: 32rem;           
-  padding: 2% 15% 5% 15%;  /* mete el texto adentro del papel */
+  max-width: 40rem;
+  margin: 0 auto;
+  /* lo centra */
+  min-height: 32rem;
+  padding: 2% 15% 5% 15%;
+  /* mete el texto adentro del papel */
   text-align: center;
 }
 
 .resenias .carousel-item {
-  min-height: 12rem;   /* para que no "salte" si un comentario es más largo que otro */
+  min-height: 12rem;
+  /* para que no "salte" si un comentario es más largo que otro */
   text-align: left;
 }
 

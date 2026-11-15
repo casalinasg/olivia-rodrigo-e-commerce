@@ -16,6 +16,10 @@ main {
     font-family: 'Mali', cursive;
 }
 
+body {
+    background-color: #B3D2E6;
+}
+
 /* INTRO */
 .intro {
     background-color: var(--crema);
@@ -37,7 +41,17 @@ main {
     max-width: 36rem;
 }
 
-/* FONDO CELESTE */
+.hero-contacto {
+    display: block;
+    width: clamp(16rem, 60vw, 34rem);
+    /* responsive: mínimo, ideal, máximo */
+    max-width: 100%;
+    height: auto;
+    margin: 3rem auto 0;
+    /* centrada, con espacio arriba */
+}
+
+/* FONDO CELESTE CON NUBES */
 .fondo-celeste {
     background-color: #B3D2E6;
     background-color: #B3D2E6;
@@ -59,7 +73,6 @@ main {
     max-width: 47rem;
     margin: 0 auto;
     padding-bottom: 3rem;
-    /* Proporción del PNG: reemplazá 5 / 8 por ANCHO / ALTO reales de carta-formulario.png. Si el contenido es más alto, el sobre crece solo. */
     aspect-ratio: 5 / 8;
 }
 
@@ -249,7 +262,7 @@ main {
 }
 */
 
-/* NOTA RAYADA PARA MOSTRAR EL RESULTADO FINAL (no aparece como un pop up)*/
+/* NOTA RAYADA PARA MOSTRAR EL RESULTADO FINAL (no aparece como un pop up: DESCARTADO)*/
 /*.nota {
     --renglon: 1.9rem;
     --margen: 1.25rem;

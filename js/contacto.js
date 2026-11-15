@@ -53,8 +53,8 @@ function validaGmail(email) {
     if (email.indexOf("@") !== email.lastIndexOf("@")) {
         return "Tiene que tener un solo @.";
     }
-    if (!email.endsWith("@gmail.com")) {
-        return "Tiene que terminar en @gmail.com";
+    if (!email.includes("@")) {
+        return "Tiene que tener un @ como mínimo.";
     }
     if (email === "@gmail.com") {
         return "Escribí tu usuario antes del @.";

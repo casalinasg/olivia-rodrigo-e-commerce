@@ -3,21 +3,13 @@ body {
     background-color: #FFF2E7;
 }
 
-/* Todo lo que está dentro de <main> usa la tipografía Mali.
-   Los botones la heredan porque Bootstrap les pone font-family: inherit. */
 main {
     font-family: 'Mali', cursive;
 }
 
-header{
+header {
     background-color: #B3D2E6;
 }
-
-/*
-nav {
-      background-color: rgba(156, 219, 242, 0.2);
-}
-*/
 
 /* Ancho máximo del contenido, centrado. Se reutiliza en todas las secciones. */
 .contenedor-productos {
@@ -44,7 +36,8 @@ nav {
 }
 
 .texto-hero h1 {
-    font-size: 1.25rem;          /* celular */
+    font-size: 1.25rem;
+    /* celular */
 }
 
 .subtitulo-hero {
@@ -56,11 +49,14 @@ nav {
     margin-top: 1.5rem;
 }
 
-@media (min-width: 768px) {      /* computadora */
+@media (min-width: 768px) {
+
+    /* computadora */
     .texto-hero h1 {
         font-size: 2.5rem;
     }
 }
+
 /* HERO MOBILE: vinilo arriba a todo el ancho, textos y botones abajo */
 @media (max-width: 767.98px) {
     .hero {
@@ -127,7 +123,8 @@ nav {
 }
 
 .precio-producto {
-    white-space: nowrap;    /* el precio nunca se parte en dos renglones */
+    white-space: nowrap;
+    /* el precio nunca se parte en dos renglones */
 }
 
 .tarjeta-disco .btn-light-pink {

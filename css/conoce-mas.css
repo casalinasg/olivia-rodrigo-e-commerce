@@ -7,11 +7,11 @@
     --rosa-carpeta: #F9AACB;
     --celeste-carpeta: #B3D2E6;
 }
- 
+
 body {
     background-color: var(--crema);
 }
- 
+
 main {
     font-family: 'Mali', cursive;
     color: var(--marron);
@@ -21,19 +21,18 @@ main {
     background-color: var(--rosa-fondo);
 }
 
- 
+
 /*      ¿QUIÉN SOY?     */
-.quien-soy{
+.quien-soy {
     background-color: var(--rosa-fondo);
 }
 
-/* Sin .container a propósito: la foto y la carta se salen de los bordes */
 /*.quien-soy {
     background-color: var(--rosa-fondo);
     overflow: hidden;
     padding: 0 0 3rem;
 }*/
- 
+
 /*
 .quien-soy h1 {
     color: var(--marron);
@@ -56,8 +55,7 @@ main {
     flex-shrink: 0;
 }
 */
- 
-/* La carta se monta sobre la parte baja de la foto, apenas inclinada */
+
 /*
 .carta-olivia {
     position: relative;
@@ -66,51 +64,52 @@ main {
     transform: rotate(4deg);
 }
 */
- 
+
 /*      DATOS Y CARPETAS        */
 .datos {
     background-color: var(--crema);
     padding: 2.5rem 0 3rem;
 }
- 
+
 .contenedor-datos {
     max-width: 62rem;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
- 
+
 .datos h2 {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
 }
- 
+
 .datos p {
     font-size: 1.05rem;
     margin: 0;
 }
- 
+
 .carpetas {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
     margin-top: 2rem;
-    align-items: start;      /* cada carpeta crece sola al desplegarse */
+    align-items: start;
+    /* cada carpeta crece sola al desplegarse */
 }
- 
+
 .carpeta {
     --fondo: var(--rosa-carpeta);
 }
- 
+
 .carpeta-celeste {
     --fondo: var(--celeste-carpeta);
 }
- 
+
 /* Imagen de la carpeta + botón transparente encima con el título */
 .carpeta__tapa {
     position: relative;
 }
- 
+
 .carpeta__img {
     display: block;
     width: 100%;
@@ -133,16 +132,18 @@ main {
 .carpeta .carpeta__tapa:has(.carpeta__titulo[aria-expanded="true"]) .carpeta__img--abierta {
     display: block;
 }
- 
+
 .carpeta__titulo {
     position: absolute;
     inset: 0;
     display: flex;
-    justify-content: flex-start;   /* el texto queda a la izquierda, en la solapa */
+    justify-content: flex-start;
+    /* el texto queda a la izquierda, en la solapa */
     align-items: flex-start;
     gap: 0.5rem;
     width: 100%;
-    padding: 2.5% 0 0 5%;          /* arriba y a la izquierda: dentro de la pestaña */
+    padding: 2.5% 0 0 5%;
+    /* arriba y a la izquierda: dentro de la pestaña */
     background: none;
     border: none;
     color: var(--marron);
@@ -152,7 +153,7 @@ main {
     text-align: left;
     cursor: pointer;
 }
- 
+
 .carpeta__titulo::after {
     content: "+";
     position: absolute;
@@ -162,22 +163,23 @@ main {
     font-size: 1.5rem;
     line-height: 1;
 }
- 
+
 .carpeta__titulo[aria-expanded="true"]::after {
     content: "−";
 }
- 
+
 .carpeta__titulo:focus-visible {
     outline: 3px solid var(--marron);
     outline-offset: -6px;
     border-radius: 1.5rem;
 }
- 
+
 /* Panel que se despliega (Bootstrap collapse) */
 .carpeta__info {
-    display: flow-root;      /* evita saltos en la animación */
+    display: flow-root;
+    /* evita saltos en la animación */
 }
- 
+
 .carpeta__texto {
     margin-top: 0.5rem;
     padding: 1rem 1.25rem;
@@ -186,11 +188,11 @@ main {
     font-size: 0.95rem;
     line-height: 1.4;
 }
- 
+
 .carpeta__texto p {
     font-size: inherit;
 }
- 
+
 /*      NOTAS (hoja rayada hecha con CSS)       */
 .notas {
     display: flex;
@@ -200,7 +202,7 @@ main {
     padding: 2rem 0 5rem;
     background-color: var(--crema);
 }
- 
+
 .nota {
     --renglon: 1.9rem;
     --margen: 1.25rem;
@@ -210,63 +212,63 @@ main {
     width: min(88%, 38rem);
     font-size: 1.05rem;
     line-height: var(--renglon);
-    filter: drop-shadow(0 4px 6px rgba(101, 74, 65, 0.25));   /* la sombra va acá porque clip-path la cortaría */
+    filter: drop-shadow(0 4px 6px rgba(101, 74, 65, 0.25));
 }
- 
+
 .nota__texto {
     background-color: var(--papel);
     background-image:
         linear-gradient(to right, transparent var(--margen), var(--linea-margen) var(--margen),
-                        var(--linea-margen) calc(var(--margen) + 2px), transparent calc(var(--margen) + 2px)),
+            var(--linea-margen) calc(var(--margen) + 2px), transparent calc(var(--margen) + 2px)),
         linear-gradient(to bottom, transparent calc(100% - 2px), var(--linea) calc(100% - 2px));
     background-size: 100% 100%, 100% var(--renglon);
     background-repeat: no-repeat, repeat-y;
 }
- 
+
 .nota__texto p {
     margin: 0 0 var(--renglon);
 }
- 
+
 .nota__texto p:last-child {
     margin-bottom: 0;
 }
- 
+
 /* Hoja 1: borde roto a la derecha */
 .nota-1 {
     margin-left: 6%;
 }
- 
+
 .nota-1 .nota__texto {
     --margen: 1.1rem;
     padding: calc(var(--renglon) * 2) 3rem calc(var(--renglon) * 3) 1.75rem;
     clip-path: polygon(0 0, 100% 0, 98.8% 3%, 99.8% 6%, 98.2% 9%, 99.6% 12%, 98.5% 15%, 100% 18%, 98.4% 21%, 99.5% 24%, 98.1% 27%, 99.7% 30%, 98.6% 33%, 99.9% 36%, 98.3% 39%, 99.4% 42%, 98.2% 45%, 99.8% 48%, 98.7% 51%, 99.6% 54%, 98.2% 57%, 99.9% 60%, 98.5% 63%, 99.5% 66%, 98.3% 69%, 99.8% 72%, 98.6% 75%, 99.4% 78%, 98.2% 81%, 99.7% 84%, 98.5% 87%, 99.9% 90%, 98.4% 93%, 99.5% 96%, 98.8% 100%, 0 100%);
 }
- 
+
 /* Hoja 2: borde roto a la izquierda */
 .nota-2 {
     margin-left: auto;
     margin-right: 6%;
 }
- 
+
 .nota-2 .nota__texto {
     --margen: 2.9rem;
     padding: calc(var(--renglon) * 2) 1.75rem calc(var(--renglon) * 2) 3.5rem;
     clip-path: polygon(100% 0, 100% 100%, 1.6% 100%, 0.2% 97%, 1.8% 94%, 0.4% 91%, 1.5% 88%, 0.1% 85%, 1.7% 82%, 0.5% 79%, 1.4% 76%, 0.2% 73%, 1.9% 70%, 0.3% 67%, 1.6% 64%, 0.1% 61%, 1.8% 58%, 0.6% 55%, 1.3% 52%, 0.2% 49%, 1.7% 46%, 0.4% 43%, 1.5% 40%, 0.1% 37%, 1.9% 34%, 0.5% 31%, 1.4% 28%, 0.2% 25%, 1.8% 22%, 0.3% 19%, 1.6% 16%, 0.1% 13%, 1.7% 10%, 0.5% 7%, 1.3% 4%, 0.4% 0);
 }
- 
+
 .nota-2 h2 {
     font-size: 1.5rem;
     font-weight: 700;
     line-height: var(--renglon);
     margin: 0 0 var(--renglon);
 }
- 
+
 /*      ESCRITORIO      */
 @media (min-width: 768px) {
     .quien-soy {
         padding-bottom: 4rem;
     }
- 
+
     /*.quien-soy__escena {
         flex-direction: row;
         justify-content: space-between;
@@ -288,48 +290,62 @@ main {
         font-size: 2rem;
     }
     */
- 
+
     .datos p {
         font-size: 1.25rem;
     }
- 
+
     .carpetas {
         grid-template-columns: 1fr 1fr;
         gap: 3rem;
     }
- 
+
     .carpeta__titulo {
         font-size: 1.25rem;
     }
- 
+
     .nota {
         --renglon: 2.2rem;
         font-size: 1.25rem;
     }
- 
+
     .nota-1 {
         width: 58%;
         margin-left: 6%;
     }
- 
+
     .nota-1 .nota__texto {
         --margen: 1.5rem;
         padding-left: 2.5rem;
         padding-right: 4rem;
     }
- 
+
     .nota-2 {
         width: 56%;
         margin-right: 6%;
     }
- 
+
     .nota-2 .nota__texto {
         --margen: 4rem;
         padding-left: 5rem;
         padding-right: 3rem;
     }
- 
+
     .nota-2 h2 {
         font-size: 1.9rem;
     }
+}
+
+.olivia-conocemas {
+    --ancho: clamp(6rem, 13vw, 12rem);
+    /* mínimo, ideal, máximo */
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: var(--ancho);
+    max-width: 100%;
+    height: auto;
+    margin-bottom: calc(-3rem - var(--ancho) * 0.15);
+    margin-left: 4vw;
+    pointer-events: none;
 }
