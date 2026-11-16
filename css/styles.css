@@ -70,7 +70,7 @@ header svg {
   color: #654A41;
   font-family: 'Mali', cursive;
   font-weight: 700;
-  font-size: 0.875rem;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -181,6 +181,7 @@ footer {
   margin: 0.2rem 0;
   line-height: 1.2;
   color: #654A41;
+
 }
 
 .informacion-footer {

@@ -66,14 +66,14 @@ p span {
 }
 
 .fechas {
-    text-align: center;
+    text-align: center; 
     /*margin-top: 20%;*/
 }
 
 .fechas p {
     margin: 0;
-    line-height: 1.3;
-    font-size: 0.875rem;
+    line-height: 2rem;
+    font-size: 1rem;
 }
 
 @media (min-width: 768px) {
