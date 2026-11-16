@@ -1,0 +1,118 @@
+/*  GENERAL  */
+body {
+    background-color: #090901;
+    color: #FFF2E7;
+}
+
+/*  HERO SECTION    */
+
+p {
+    color: #FA9EC3
+}
+
+p span {
+    color: #FFF2E7;
+}
+
+.barra-navegacion svg {
+    background-color: #E1B6B8;
+}
+
+.hero {
+    background-image: url('../img/hero-section-olivia-tour-8k-rosa.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 90rem;
+    /* celular: 480px aprox. */
+}
+
+.contenedor-tour {
+    max-width: 45%;
+}
+
+.contenedor-boton {
+    max-width: 35%;
+    margin-top: 20rem;
+}
+
+.contenedor-boton p {
+    text-align: right;
+}
+
+
+/*  PÓSTER PROMOCIONAL TOUR */
+.imagen-promocional-fondo {
+    background-image: url('../img/the-unraveled-tour.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    aspect-ratio: 1438 / 605;
+    min-height: 0;
+}
+
+.linea-rosa {
+    border: 3px dashed #F9ADCB;
+    margin-bottom: 0;
+}
+
+.contenido-img-promocional {
+    margin: 5rem auto 5rem auto;
+}
+
+/*   FECHAS   */
+.contenido-fechas {
+    margin: auto;
+}
+
+.fechas {
+    text-align: center; 
+    /*margin-top: 20%;*/
+}
+
+.fechas p {
+    margin: 0;
+    line-height: 2rem;
+    font-size: 1rem;
+}
+
+@media (min-width: 768px) {
+
+    /* computadora */
+    .fechas {
+        text-align: right;
+        margin-top: 5%;
+    }
+
+    .nashville-img {
+        margin-bottom: 1rem;
+    }
+
+    .contenedor-tour {
+        max-width: 25%;
+    }
+
+    .contenedor-boton {
+        margin-top: 45%;
+        max-width: 25%;
+    }
+}
+
+
+/*  PROXIMAMENTE    */
+.proximamente {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+
+/*   CAROUSEL   */
+/*
+.fondo-oscuro{
+    background-color: #760340;
+    padding: 10rem 0;
+    margin: 3rem 0;
+}
+.carousel-fotos-shows .carousel-item img {
+    max-width: 100%;
+}
+*/

@@ -1,0 +1,382 @@
+/*    FUENTES   */
+@import url('https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+h1,
+h2,
+h3 {
+  font-family: 'Mali', cursive;
+  font-weight: 700;
+}
+
+
+a {
+  font-family: 'Mali', cursive;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.linea-separadora {
+  border: 3px dashed #654A41;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.btn-light-pink,
+.btn-outline-light-blue,
+.btn-outline-light,
+.btn-dark {
+  padding: 0.5rem 3rem;
+  text-align: center;
+}
+
+p {
+  font-family: 'Mali', cursive;
+}
+
+/*    BARRA DE NAVEGACIÓN   */
+nav img {
+  height: 3rem;
+  width: auto;
+}
+
+nav {
+  position: fixed;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+header svg {
+  height: 3rem;
+  width: auto;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: #654A41;
+}
+
+/*CONTADOR DE PRODUCTOS*/
+.enlace-carrito {
+  position: relative;
+  display: inline-block;
+}
+
+.contador-carrito {
+  position: absolute;
+  top: -0.25rem;
+  right: -0.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  background-color: #FFF2E7;
+  color: #654A41;
+  font-family: 'Mali', cursive;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*  ÍCONOS ESTADOS  */
+header svg:hover {
+  box-shadow: inset 0 4px 6px #00000082;
+
+}
+
+.hero {
+  padding-top: 5rem;
+}
+
+/*  BOTONES */
+.btn-light-pink {
+  background-color: #F9ADCB;
+  color: #040000;
+  border: 2px solid #F9ADCB;
+  border-radius: 5rem;
+  display: inline-block;
+}
+
+.btn-outline-light-blue {
+  background-color: #B3D2E6;
+  color: #040000;
+  border: 2px solid #F9ADCB;
+  border-radius: 5rem;
+  display: inline-block;
+}
+
+.btn-outline-light {
+  background-color: #FFF2E7;
+  color: #040000;
+  border: 2px solid #F9ADCB;
+  border-radius: 5rem;
+  display: inline-block;
+}
+
+.btn-dark {
+  background-color: #654A41;
+  color: #FFF2E7;
+  border: 2px solid #654A41;
+  border-radius: 5rem;
+  display: inline-block;
+}
+
+.btn-contactame {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/*  ESTADOS DE BOTÓN  */
+.btn-light-pink:hover {
+  background-color: #ff8fbc;
+  color: #82002b;
+  border: 2px solid #ff8fbc;
+  border-radius: 5rem;
+  display: inline-block;
+  box-shadow: inset 0 4px 6px #63002982;
+}
+
+.btn-outline-light-blue:hover {
+  background-color: #95bcff;
+  color: #000a3982;
+  border: 2px solid #63002982;
+  border-radius: 5rem;
+  display: inline-block;
+  box-shadow: inset 0 4px 6px #000a3982;
+}
+
+.btn-outline-light:hover {
+  background-color: #ff8fbc;
+  color: #82002b;
+  border: 2px solid #ff8fbc;
+  border-radius: 5rem;
+  display: inline-block;
+  box-shadow: inset 0 4px 6px #63002982;
+}
+
+.btn-dark:hover {
+  background-color: #3d2f2a;
+  color: #FFF2E7;
+  border: 2px solid #3d2f2a;
+  border-radius: 5rem;
+  display: inline-block;
+  box-shadow: inset 0 4px 6px #00000082;
+}
+
+
+/*  FOOTER   */
+footer {
+  background-color: #E1B6B8;
+}
+
+.frase-footer {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #654A41;
+  margin: 0;
+  padding-bottom: 5rem;
+  padding-top: 3rem;
+}
+
+.informacion-footer p {
+  margin: 0.2rem 0;
+  line-height: 1.2;
+  color: #654A41;
+
+}
+
+.informacion-footer {
+  margin-bottom: 1rem;
+}
+
+/*  ÍCONOS ESTADOS  */
+.redes-sociales svg:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+/*   CAROUSEL    */
+.carousel {
+  width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  max-width: 20rem;
+  height: auto;
+}
+
+
+/* Contenedor de los deslizadores */
+.carousel-indicators {
+  position: static;
+  /* baja y no flota sobre la foto */
+  margin: 1.5rem 0 1.5rem 0;
+  gap: 0.5rem;
+}
+
+/* Deslizadores */
+.carousel .carousel-indicators button {
+  width: 0.75rem;
+  height: 0.75rem;
+  border: none;
+  border-radius: 50%;
+  background-color: #E1B6B8;
+  opacity: 1;
+  /* Bootstrap los deja a media transparencia */
+  padding: 0;
+  margin: 0;
+}
+
+.carousel .carousel-indicators button:hover {
+  transform: scale(1.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.carousel .carousel-indicators .active {
+  background-color: #FD5572;
+}
+
+/*    CONOCÉ + QUIÉN SOY  */
+.fotos-conoceme {
+  position: relative;
+  max-width: 50rem;
+}
+
+.titulo-conoceme {
+  width: 52%;
+  margin-bottom: -5%;
+  text-align: center;
+  color: #654A41;
+}
+
+.foto-olivia {
+  width: 52%;
+  position: relative;
+  z-index: 1;
+}
+
+.carta-olivia {
+  width: 52%;
+  margin-left: -4%;
+}
+
+/* Celular (menos de 768px): el título va arriba a la izquierda y la foto y la carta
+   quedan una debajo de la otra (la carta se monta un poco sobre la foto). */
+@media (max-width: 767.98px) {
+  .fotos-conoceme {
+    width: 100%;
+  }
+
+  .titulo-conoceme {
+    width: auto;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+
+  .foto-olivia {
+    width: 70%;
+  }
+
+  .carta-olivia {
+    width: 88%;
+    margin: -14% auto 0 auto;
+    /* sube sobre la parte de abajo de la foto y se centra */
+  }
+}
+
+/*    VENTANAS EMERGENTES (contacto y productos)   */
+/* Botón principal (óvalo rosa) */
+.btn-marron {
+  font-family: 'Mali', cursive;
+  font-weight: 700;
+  color: #654A41;
+  background-color: #FBD3E2;
+  border: none;
+  border-radius: 5rem;
+  padding: 0.25rem 2rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-marron:hover,
+.btn-marron:focus-visible {
+  background-color: #FF5C8A;
+  color: #fff;
+}
+
+/* Botón secundario (mismo óvalo, sin relleno) */
+.btn-cancelar {
+  font-family: 'Mali', cursive;
+  font-weight: 700;
+  color: #654A41;
+  background-color: transparent;
+  border: 2px solid #654A41;
+  border-radius: 5rem;
+  padding: 0.25rem 2rem;
+  cursor: pointer;
+}
+
+.btn-cancelar:hover,
+.btn-cancelar:focus-visible {
+  background-color: #654A41;
+  color: #FFF2E7;
+}
+
+/* Fondo semitransparente que cubre toda la pantalla y centra la ventana */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  /* más alto que el menú y todo el resto: queda al frente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background-color: rgba(43, 31, 26, 0.65);
+}
+
+/* Cuadro de la ventana */
+.ventana-confirm {
+  width: 100%;
+  max-width: 26rem;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  font-family: 'Mali', cursive;
+  color: #654A41;
+  background-color: #FFF2E7;
+  border-radius: 1.5rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.ventana-confirm h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.ventana-confirm .btn-marron,
+.ventana-confirm .btn-cancelar {
+  margin-top: 0;
+  padding: 0.4rem 2rem;
+  display: inline-block;
+}
+
+.botones-confirm {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/*  MINI OLIVIA DECORATIVA ENCIMA DEL FOOTER  */
+
+.olivia-mini {
+  --ancho: clamp(11rem, 30vw, 28rem);
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: var(--ancho);
+  max-width: 100%;
+  height: auto;
+  margin-bottom: calc(-3rem - var(--ancho) * 0.03);
+  pointer-events: none;
+}
