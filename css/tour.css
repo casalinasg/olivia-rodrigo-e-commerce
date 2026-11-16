@@ -65,12 +65,9 @@ p span {
     margin: auto;
 }
 
-.fechas {
+.fechas{
+    color: #F9ADCB;
     text-align: center; 
-    /*margin-top: 20%;*/
-}
-
-.fechas p {
     margin: 0;
     line-height: 2rem;
     font-size: 1rem;
