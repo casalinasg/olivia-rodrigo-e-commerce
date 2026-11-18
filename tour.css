@@ -102,6 +102,15 @@ p span {
     margin-bottom: 2rem;
 }
 
+/*  FOOTER     */
+.mini-olivia-tour{
+    --ancho: clamp(6rem, 13vw, 12rem);
+    width: var(--ancho);
+    max-width: 60%;
+    height: auto;
+    margin-left: 4vw;
+}
+
 /*   CAROUSEL   */
 /*
 .fondo-oscuro{

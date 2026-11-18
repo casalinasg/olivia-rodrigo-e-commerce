@@ -46,7 +46,9 @@
 
                 <div class="iconos-alineados-derecha d-flex justify-content-end gap-2">
                     <!--Cart ícono-->
-                    <a href="#seccion-carrito" class="enlace-carrito">
+                    <a href="#offcanvas-carrito" class="enlace-carrito" role="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvas-carrito" aria-controls="offcanvas-carrito"
+                        aria-label="Abrir carrito">
                         <svg width="54" height="54" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M40.5 43.875C40.5 45.739 38.989 47.25 37.125 47.25C35.261 47.25 33.75 45.739 33.75 43.875C33.75 42.011 35.261 40.5 37.125 40.5C38.989 40.5 40.5 42.011 40.5 43.875Z"
@@ -235,7 +237,7 @@
             <div class="container">
                 <h2 class="titulo-seccion text-center">Merch</h2>
                 <div class="contenedor-productos">
-                    <div class="row row-cols-2 row-cols-sm-3 g-3">
+                    <div class="row row-cols-1 row-cols-md-3 g-3">
                         <div class="col d-flex flex-column">
                             <article class="tarjeta-merch flex-grow-1 text-center">
                                 <div class="ratio ratio-1x1">
@@ -354,207 +356,211 @@
                 </div>
             </div>
         </section>
-        <!-- TU CARRITO: empieza escondida (display: none). El JS la muestra cuando hay productos.
-             Cada fila también empieza escondida y se muestra cuando ese producto tiene unidades. -->
-        <section class="carrito" id="seccion-carrito" style="display: none">
-            <div class="container">
-                <div class="contenedor-productos">
-                    <h2 class="titulo-seccion text-center">Tu carrito</h2>
-                    <!-- SOUR (Vinilo) -->
-                    <article class="item-carrito" id="fila-vinilo-0" style="display: none">
-                        <img class="imagen-carrito" src="img/vinilo-sour.png" alt="Vinilo de SOUR">
-                        <div class="datos-item">
-                            <p class="nombre-item">SOUR (Vinilo)</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-vinilo-0" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(vinilo[0])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-vinilo-0" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- GUTS (Vinilo) -->
-                    <article class="item-carrito" id="fila-vinilo-1" style="display: none">
-                        <img class="imagen-carrito" src="img/vinilo-guts.png" alt="Vinilo de GUTS">
-                        <div class="datos-item">
-                            <p class="nombre-item">GUTS (Vinilo)</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-vinilo-1" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(vinilo[1])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-vinilo-1" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- You seem pretty sad for a girl so in love (Vinilo) -->
-                    <article class="item-carrito" id="fila-vinilo-2" style="display: none">
-                        <img class="imagen-carrito" src="img/vinilo-yspsfagsil.png"
-                            alt="Vinilo de You seem pretty sad for a girl so in love">
-                        <div class="datos-item">
-                            <p class="nombre-item">You seem pretty sad for a girl so in love (Vinilo)</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-vinilo-2" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(vinilo[2])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-vinilo-2" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- SOUR (CD) -->
-                    <article class="item-carrito" id="fila-cd-0" style="display: none">
-                        <img class="imagen-carrito" src="img/cd-sour.png" alt="CD de SOUR">
-                        <div class="datos-item">
-                            <p class="nombre-item">SOUR (CD)</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-cd-0" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(cd[0])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-cd-0" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- GUTS (CD) -->
-                    <article class="item-carrito" id="fila-cd-1" style="display: none">
-                        <img class="imagen-carrito" src="img/cd-guts.png" alt="CD de GUTS">
-                        <div class="datos-item">
-                            <p class="nombre-item">GUTS (CD)</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-cd-1" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(cd[1])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-cd-1" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- You seem pretty sad for a girl so in love (CD) -->
-                    <article class="item-carrito" id="fila-cd-2" style="display: none">
-                        <img class="imagen-carrito" src="img/cd-yspsfagsil.png"
-                            alt="CD de You seem pretty sad for a girl so in love">
-                        <div class="datos-item">
-                            <p class="nombre-item">You seem pretty sad for a girl so in love (CD)</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-cd-2" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(cd[2])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-cd-2" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- The Unraveled Tour Tote bag -->
-                    <article class="item-carrito" id="fila-merch-0" style="display: none">
-                        <img class="imagen-carrito" src="img/tote-bag-tour.png" alt="The Unraveled Tour Tote bag">
-                        <div class="datos-item">
-                            <p class="nombre-item">The Unraveled Tour Tote bag</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-0" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(merch[0])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-merch-0" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- The Unraveled Tour Cuaderno -->
-                    <article class="item-carrito" id="fila-merch-1" style="display: none">
-                        <img class="imagen-carrito" src="img/cuaderno-tour.png" alt="The Unraveled Tour Cuaderno">
-                        <div class="datos-item">
-                            <p class="nombre-item">The Unraveled Tour Cuaderno</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-1" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(merch[1])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-merch-1" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- The Unraveled Tour Llaveros x3 -->
-                    <article class="item-carrito" id="fila-merch-2" style="display: none">
-                        <img class="imagen-carrito" src="img/llaveros-tour.png" alt="The Unraveled Tour Llaveros x3">
-                        <div class="datos-item">
-                            <p class="nombre-item">The Unraveled Tour Llaveros x3</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-2" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(merch[2])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-merch-2" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- The Unraveled Tour Buzo -->
-                    <article class="item-carrito" id="fila-merch-3" style="display: none">
-                        <img class="imagen-carrito" src="img/buzo-tour.png" alt="The Unraveled Tour Buzo">
-                        <div class="datos-item">
-                            <p class="nombre-item">The Unraveled Tour Buzo</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-3" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(merch[3])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-merch-3" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- The Unraveled Tour Botella -->
-                    <article class="item-carrito" id="fila-merch-4" style="display: none">
-                        <img class="imagen-carrito" src="img/botella-tour.png" alt="The Unraveled Tour Botella">
-                        <div class="datos-item">
-                            <p class="nombre-item">The Unraveled Tour Botella</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-4" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(merch[4])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-merch-4" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                    <!-- The Unraveled Tour Remera -->
-                    <article class="item-carrito" id="fila-merch-5" style="display: none">
-                        <img class="imagen-carrito" src="img/remera-tour.png" alt="The Unraveled Tour Remera">
-                        <div class="datos-item">
-                            <p class="nombre-item">The Unraveled Tour Remera</p>
-                            <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-5" value="0 u."
-                                readonly tabindex="-1" aria-label="Unidades en el carrito">
-                            <div class="d-flex justify-content-between align-items-end">
-                                <button type="button" class="btn-dark" onclick="eliminar(merch[5])">Eliminar</button>
-                                <input type="text" class="campo-lectura precio-item" id="subtotal-merch-5" value="$0"
-                                    readonly tabindex="-1" aria-label="Precio de las unidades">
-                            </div>
-                        </div>
-                    </article>
-                </div>
-            </div>
-        </section>
+    </main>
 
-        <!-- RESUMEN DE COMPRA: también empieza escondida -->
-        <section class="resumen" id="seccion-resumen" style="display: none">
-            <div class="linea-separadora"></div>
-            <div class="container">
-                <div class="contenedor-productos">
-                    <h2 class="titulo-seccion">Resumen de compra</h2>
-                    <div class="tarjeta-resumen">
-                        <div class="fila-total d-flex justify-content-between align-items-center">
-                            <p class="texto-total">Total</p>
-                            <input type="text" class="campo-lectura texto-total campo-total" id="total-compra"
-                                value="$0" readonly tabindex="-1" aria-label="Total de la compra">
-                        </div>
-                        <div class="botones-resumen d-flex flex-column align-items-center gap-2">
-                            <a class="btn-light-pink" href="#">Comprar</a>
-                            <button type="button" class="btn-dark" onclick="vaciarCarrito()">Eliminar carrito</button>
+     <!-- CARRITO (offcanvas a la derecha). Los ids de las secciones y sus style="display: none"
+         se mantienen igual para que carrito.js siga funcionando. -->
+ <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas-carrito" data-bs-scroll="true"
+        data-bs-backdrop="false" aria-labelledby="titulo-offcanvas-carrito">
+        <div class="offcanvas-header">
+            <h2 class="titulo-seccion offcanvas-title" id="titulo-offcanvas-carrito">Tu carrito</h2>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar carrito"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <!-- TU CARRITO: empieza escondida (display: none). El JS la muestra cuando hay productos.
+                 Cada fila también empieza escondida y se muestra cuando ese producto tiene unidades. -->
+            <section class="carrito" id="seccion-carrito" style="display: none">
+                <!-- SOUR (Vinilo) -->
+                <article class="item-carrito" id="fila-vinilo-0" style="display: none">
+                    <img class="imagen-carrito" src="img/vinilo-sour.png" alt="Vinilo de SOUR">
+                    <div class="datos-item">
+                        <p class="nombre-item">SOUR (Vinilo)</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-vinilo-0" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(vinilo[0])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-vinilo-0" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
                         </div>
                     </div>
+                </article>
+                <!-- GUTS (Vinilo) -->
+                <article class="item-carrito" id="fila-vinilo-1" style="display: none">
+                    <img class="imagen-carrito" src="img/vinilo-guts.png" alt="Vinilo de GUTS">
+                    <div class="datos-item">
+                        <p class="nombre-item">GUTS (Vinilo)</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-vinilo-1" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(vinilo[1])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-vinilo-1" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
+                        </div>
+                    </div>
+                </article>
+                <!-- You seem pretty sad for a girl so in love (Vinilo) -->
+                <article class="item-carrito" id="fila-vinilo-2" style="display: none">
+                    <img class="imagen-carrito" src="img/vinilo-yspsfagsil.png"
+                        alt="Vinilo de You seem pretty sad for a girl so in love">
+                    <div class="datos-item">
+                        <p class="nombre-item">You seem pretty sad for a girl so in love (Vinilo)</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-vinilo-2" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(vinilo[2])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-vinilo-2" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
+                        </div>
+                    </div>
+                </article>
+                <!-- SOUR (CD) -->
+                <article class="item-carrito" id="fila-cd-0" style="display: none">
+                    <img class="imagen-carrito" src="img/cd-sour.png" alt="CD de SOUR">
+                    <div class="datos-item">
+                        <p class="nombre-item">SOUR (CD)</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-cd-0" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(cd[0])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-cd-0" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
+                        </div>
+                    </div>
+                </article>
+                <!-- GUTS (CD) -->
+                <article class="item-carrito" id="fila-cd-1" style="display: none">
+                    <img class="imagen-carrito" src="img/cd-guts.png" alt="CD de GUTS">
+                    <div class="datos-item">
+                        <p class="nombre-item">GUTS (CD)</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-cd-1" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(cd[1])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-cd-1" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
+                        </div>
+                    </div>
+                </article>
+                <!-- You seem pretty sad for a girl so in love (CD) -->
+                <article class="item-carrito" id="fila-cd-2" style="display: none">
+                    <img class="imagen-carrito" src="img/cd-yspsfagsil.png"
+                        alt="CD de You seem pretty sad for a girl so in love">
+                    <div class="datos-item">
+                        <p class="nombre-item">You seem pretty sad for a girl so in love (CD)</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-cd-2" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(cd[2])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-cd-2" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
+                        </div>
+                    </div>
+                </article>
+                <!-- The Unraveled Tour Tote bag -->
+                <article class="item-carrito" id="fila-merch-0" style="display: none">
+                    <img class="imagen-carrito" src="img/tote-bag-tour.png" alt="The Unraveled Tour Tote bag">
+                    <div class="datos-item">
+                        <p class="nombre-item">The Unraveled Tour Tote bag</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-0" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(merch[0])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-merch-0" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
+                        </div>
+                    </div>
+                </article>
+                <!-- The Unraveled Tour Cuaderno -->
+                <article class="item-carrito" id="fila-merch-1" style="display: none">
+                    <img class="imagen-carrito" src="img/cuaderno-tour.png" alt="The Unraveled Tour Cuaderno">
+                    <div class="datos-item">
+                        <p class="nombre-item">The Unraveled Tour Cuaderno</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-1" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(merch[1])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-merch-1" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
+                        </div>
+                    </div>
+                </article>
+                <!-- The Unraveled Tour Llaveros x3 -->
+                <article class="item-carrito" id="fila-merch-2" style="display: none">
+                    <img class="imagen-carrito" src="img/llaveros-tour.png" alt="The Unraveled Tour Llaveros x3">
+                    <div class="datos-item">
+                        <p class="nombre-item">The Unraveled Tour Llaveros x3</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-2" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(merch[2])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-merch-2" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
+                        </div>
+                    </div>
+                </article>
+                <!-- The Unraveled Tour Buzo -->
+                <article class="item-carrito" id="fila-merch-3" style="display: none">
+                    <img class="imagen-carrito" src="img/buzo-tour.png" alt="The Unraveled Tour Buzo">
+                    <div class="datos-item">
+                        <p class="nombre-item">The Unraveled Tour Buzo</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-3" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(merch[3])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-merch-3" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
+                        </div>
+                    </div>
+                </article>
+                <!-- The Unraveled Tour Botella -->
+                <article class="item-carrito" id="fila-merch-4" style="display: none">
+                    <img class="imagen-carrito" src="img/botella-tour.png" alt="The Unraveled Tour Botella">
+                    <div class="datos-item">
+                        <p class="nombre-item">The Unraveled Tour Botella</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-4" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(merch[4])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-merch-4" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
+                        </div>
+                    </div>
+                </article>
+                <!-- The Unraveled Tour Remera -->
+                <article class="item-carrito" id="fila-merch-5" style="display: none">
+                    <img class="imagen-carrito" src="img/remera-tour.png" alt="The Unraveled Tour Remera">
+                    <div class="datos-item">
+                        <p class="nombre-item">The Unraveled Tour Remera</p>
+                        <input type="text" class="campo-lectura chip-cantidad" id="unidades-merch-5" value="0 u."
+                            readonly tabindex="-1" aria-label="Unidades en el carrito">
+                        <div class="d-flex justify-content-between align-items-end">
+                            <button type="button" class="btn-dark" onclick="eliminar(merch[5])">Eliminar</button>
+                            <input type="text" class="campo-lectura precio-item" id="subtotal-merch-5" value="$0"
+                                readonly tabindex="-1" aria-label="Precio de las unidades">
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- RESUMEN DE COMPRA: también empieza escondida -->
+            <section class="resumen" id="seccion-resumen" style="display: none">
+                <div class="linea-separadora"></div>
+                <h2 class="titulo-seccion">Resumen de compra</h2>
+                <div class="tarjeta-resumen">
+                    <div class="fila-total d-flex justify-content-between align-items-center">
+                        <p class="texto-total">Total</p>
+                        <input type="text" class="campo-lectura texto-total campo-total" id="total-compra" value="$0"
+                            readonly tabindex="-1" aria-label="Total de la compra">
+                    </div>
+                    <div class="botones-resumen d-flex flex-column align-items-center gap-2">
+                        <a class="btn-light-pink" href="#">Comprar</a>
+                        <button type="button" class="btn-dark" onclick="vaciarCarrito()">Eliminar carrito</button>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </div>
+    </div>
 
     <!-- VENTANA EMERGENTE: la misma de la página de contacto. La usa carrito.js para los avisos
          y las confirmaciones. Empieza escondida y el JS solo le cambia el texto y la muestra. -->

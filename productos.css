@@ -186,6 +186,15 @@ header {
     font-size: 1rem;
 }
 
+.offcanvas {
+    background-color: #FFF2E7;
+    font-family: 'Mali', cursive;
+}
+
+.overlay {
+    z-index: 2000;
+}
+
 /*      TU CARRITO      */
 .carrito {
     background-color: #FFF2E7;
