@@ -6,6 +6,7 @@
    - Cuando toca "Eliminar", el JS pone las unidades en 0 y ESCONDE la fila.
    ========================================================================== */
 
+const panelCarrito = bootstrap.Offcanvas.getOrCreateInstance("#offcanvas-carrito");
 
 /*      MÚSICA      */
 const cd = [
@@ -315,6 +316,7 @@ function restar(producto) {
             campo.value = 1;
 
             actualizarCarrito();
+            panelCarrito.show();
         }
     }
 }
@@ -372,6 +374,8 @@ function actualizarCarrito() {
     if (total === 0) {
         seccionCarrito.style.display = "none";
         seccionResumen.style.display = "none";
+
+        panelCarrito.hide();
     } else {
         seccionCarrito.style.display = "block";
         seccionResumen.style.display = "block";
@@ -388,6 +392,7 @@ function actualizarCarrito() {
         contador.value = totalUnidades;
     }
 }
+
 /* Suma las unidades de todos los productos de UNA lista (cd, vinilo o merch). */
 function unidadesDeLista(lista) {
     let unidades = 0;
@@ -399,3 +404,4 @@ function unidadesDeLista(lista) {
 
 
 actualizarCarrito();
+
